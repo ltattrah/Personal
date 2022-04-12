@@ -1,0 +1,15 @@
+import turtle
+
+turtle.showturtle()
+turtle.forward(200)
+turtle.right(90)
+turtle.dot()
+turtle.forward(200)
+turtle.right(90)
+turtle.dot()
+turtle.forward(200)
+turtle.right(90)
+turtle.dot()
+turtle.forward(200)
+turtle.dot()
+turtle.done()
