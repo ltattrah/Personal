@@ -2,6 +2,7 @@
 const nextConfig = {
   reactStrictMode: true,
   poweredByHeader: false,
+  output: 'standalone',
   // Keep the client bundle small for low-bandwidth users.
   compress: true,
   images: { unoptimized: true },

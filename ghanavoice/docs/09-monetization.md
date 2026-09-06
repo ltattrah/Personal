@@ -12,7 +12,8 @@ Principle: citizens never pay for basic access; institutions pay for reach, cont
 ## Implementation hooks
 
 - `src/lib/billing/plans.ts` defines entitlements; `PLANS[plan].entitlements` gates features.
-- `api_keys` are hashed; `api_key_increment_usage` enforces quotas per calendar month; `domain_scope` restricts retrieval for organisation assistants.
+- `api_keys` are hashed; `api_key_increment_usage` enforces quotas per calendar month; `domain_scope` restricts retrieval for organisation assistants. Keys are issued and revoked in `/admin/api-keys` (admin role); the plaintext is shown once.
+- Out-of-scope questions to a scoped assistant abstain rather than returning a marginal match (ambiguity rule in `computeConfidence`).
 - `organisations.branding` (name, colours, logo URL) is applied by a small theme layer in the shell (not yet wired in v0.1 beyond the data model).
 - Offline packs and the citizen PWA stay free; institutional packs may include private content for their staff.
 

@@ -68,7 +68,11 @@ export function normalizeForMatch(text: string): string {
     .replace(/[’']/g, '')
     .replace(/[^a-z0-9#*+\s]/g, ' ')
     .replace(/\s+/g, ' ')
-    .trim();
+    .trim()
+    // Light plural folding for English-style tokens ("worms" -> "worm",
+    // "vaccines" -> "vaccine"). Applied identically to documents and queries.
+    // Ghanaian-language words almost never end in -s, so the effect there is nil.
+    .replace(/\b([a-z]{4,})s\b/g, '$1');
 }
 
 export function cosine(a: number[], b: number[]): number {

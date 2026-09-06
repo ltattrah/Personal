@@ -49,6 +49,13 @@ export function computeConfidence(
   const stale = new Date(top.entry.reviewBy) < today;
 
   let score = top.score * 0.6 + Math.min(margin * 2, 0.4) * 0.5;
+  // Weak and ambiguous: several entries matched about equally and none well.
+  // Typical of out-of-scope questions in a domain-scoped assistant. Abstain
+  // rather than present the marginal winner as the answer.
+  if (top.score < 0.5 && margin < 0.05 && passages.length > 1) {
+    score = Math.min(score, 0.2);
+    notes.push('Several topics matched about equally and none matched well.');
+  }
   if (top.languageFallback) {
     score *= 0.8;
     notes.push('Answer shown in a different language variety from the one you selected.');

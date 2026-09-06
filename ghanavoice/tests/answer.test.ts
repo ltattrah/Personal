@@ -63,3 +63,14 @@ describe('ask pipeline', () => {
     expect(r2.provider.answerer).toBe('extractive-v1');
   });
 });
+
+describe('domain-scoped assistant', () => {
+  it('abstains on out-of-scope questions instead of answering with a marginal match', async () => {
+    const index = await getIndex();
+    const r = await ask({ question: 'How do I register for the Ghana Card?', language: 'en', domain: 'agriculture' }, { index, services, glossary });
+    expect(r.kind).toBe('not_certain');
+    const ok = await ask({ question: 'worms on my maize', language: 'en', domain: 'agriculture' }, { index, services, glossary });
+    expect(ok.kind).toBe('answer');
+    expect(ok.citations[0].entryId).toBe('fall-armyworm-management');
+  });
+});

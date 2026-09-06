@@ -42,6 +42,29 @@ export default function ContentAdmin() {
     }
   }
 
+  async function review(entryId: string, language: string) {
+    const ask = (dim: string) => {
+      const v = Number(prompt(`${language} · ${dim} score 1-5 (native-speaker reviewer only):`));
+      return Number.isInteger(v) && v >= 1 && v <= 5 ? v : null;
+    };
+    const adequacy = ask('adequacy (meaning preserved)');
+    if (adequacy === null) return;
+    const fluency = ask('fluency (natural in this variety)');
+    if (fluency === null) return;
+    const register = ask('register (respectful, plain)');
+    if (register === null) return;
+    const orthography = ask('orthography (standard spelling)');
+    if (orthography === null) return;
+    const comment = prompt('Comment (optional):') ?? undefined;
+    try {
+      const r = await adminFetch<{ passed: boolean }>('/api/admin/review', { method: 'POST', body: JSON.stringify({ entryId, language, scores: { adequacy, fluency, register, orthography }, comment }) });
+      alert(r.passed ? 'Marked as native-reviewed.' : 'Scores below 4: rendering stays unreviewed; comment recorded in the audit trail.');
+      load();
+    } catch (e) {
+      alert((e as Error).message);
+    }
+  }
+
   async function save() {
     try {
       const parsed = JSON.parse(draft);
@@ -124,10 +147,16 @@ export default function ContentAdmin() {
                   <td>
                     <div className="flex flex-wrap gap-1">
                       {e.renderings.map((r) => (
-                        <span key={r.language} className={`rounded px-1 text-xs ${r.nativeReviewed ? 'bg-forest-100' : 'bg-neutral-100'}`} title={`origin: ${r.origin}`}>
+                        <button
+                          key={r.language}
+                          type="button"
+                          onClick={() => review(e.id, r.language)}
+                          className={`rounded px-1 text-xs hover:ring-1 hover:ring-forest-500 ${r.nativeReviewed ? 'bg-forest-100' : 'bg-neutral-100'}`}
+                          title={r.nativeReviewed ? `reviewed by ${r.reviewedBy} on ${r.reviewedOn}` : `origin: ${r.origin}; click to record a native-speaker review`}
+                        >
                           {LANGUAGES[r.language].nameEn}
                           {r.nativeReviewed ? ' ✓' : ''}
-                        </span>
+                        </button>
                       ))}
                     </div>
                   </td>

@@ -3,6 +3,7 @@ import { z } from 'zod';
 import { LANGUAGE_CODES } from '@/lib/i18n/languages';
 import { getAnalyticsSink, sessionHash } from '@/lib/analytics/events';
 import { badRequest, json, serverError } from '@/lib/http';
+import { getOpsStore } from '@/lib/ops/store';
 
 export const runtime = 'nodejs';
 
@@ -35,15 +36,9 @@ export async function POST(req: NextRequest) {
       issue: b.issue,
       entryIds: b.entryIds,
     });
-    if (b.suggestedText && process.env.GHANAVOICE_MODE === 'full') {
-      const { getServiceClient } = await import('@/lib/db/supabase');
-      const { error } = await getServiceClient().from('feedback_suggestions').insert({
-        language: b.language,
-        issue: b.issue ?? 'other',
-        entry_ids: b.entryIds,
-        suggested_text: b.suggestedText,
-      });
-      if (error) throw error;
+    if (b.suggestedText) {
+      const store = await getOpsStore();
+      await store.createFeedback({ language: b.language as never, issue: b.issue ?? 'other', entryIds: b.entryIds, suggestedText: b.suggestedText });
     }
     return json({ ok: true });
   } catch (e) {

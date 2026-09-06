@@ -49,6 +49,10 @@ Invariants (schema + SQL constraints):
 
 `organisations (plan, domain_scope, branding)`, `admin_users (roles[], native_reviewer_for[])`, `api_keys (key_hash, prefix, plan, domain_scope, revoked_at)`, `api_key_usage (key_id, month, count)`.
 
+## Operational store
+
+`src/lib/ops/store.ts` abstracts escalations, feedback suggestions, API keys and audio samples with a memory implementation (demo mode, tests) and a Supabase implementation, so every admin page works in both modes.
+
 ## Client-side (device only)
 
 localStorage keys `gv.settings.v1`, `gv.consent.v1`, `gv.history.v1`, `gv.session.v1`; Cache Storage `gv-packs-v1` for offline packs; `gv-shell-v1` for the app shell.

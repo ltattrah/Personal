@@ -33,8 +33,17 @@ Admin console: http://localhost:3000/admin with token `change-me` (ADMIN_TOKEN).
    GHANAVOICE_MODE=full npm run kb:seed -- --as-draft
    ```
 
-5. Deploy the Next.js app (Vercel, Fly.io, a VPS with Node 20, or Docker: `npm run build && npm start`). Ensure HTTPS (required for microphone access and service workers).
-6. Set `Permissions-Policy` and `Cache-Control` headers as in `next.config.mjs` if a CDN sits in front.
+5. Deploy the Next.js app. Options:
+   - **Docker** (recommended for a Ghana-hosted VPS): `docker build -t ghanavoice . && docker run -p 3000:3000 --env-file .env ghanavoice`. The image uses Next.js standalone output, runs as a non-root user and exposes `/api/health` for the container healthcheck.
+   - Vercel, Fly.io, or a VPS with Node 22: `npm run build && npm start`.
+
+   Ensure HTTPS (required for microphone access and service workers).
+6. Deploy the storage purge edge function: `supabase functions deploy purge-audio --no-verify-jwt`, set `PURGE_SECRET`, and schedule an hourly POST with `Authorization: Bearer <PURGE_SECRET>`.
+7. Set `Permissions-Policy` and `Cache-Control` headers as in `next.config.mjs` if a CDN sits in front.
+
+## Continuous integration
+
+`.github/workflows/ghanavoice-ci.yml` (repository root) runs typecheck, Vitest, content validation, the Python metric tests and a production build on every push or pull request touching `ghanavoice/`.
 
 ## Low-bandwidth considerations
 
@@ -47,7 +56,7 @@ Admin console: http://localhost:3000/admin with token `change-me` (ADMIN_TOKEN).
 
 | Job | Function | Schedule |
 | --- | --- | --- |
-| Purge expired audio | `purge_expired_audio()` plus an edge function deleting storage objects marked `deleted_at` | hourly |
+| Purge expired audio | `purge-audio` edge function, which calls `purge_expired_audio()` and removes the storage objects | hourly |
 | Purge closed escalations | `purge_closed_escalations()` | daily |
 | Purge raw analytics | `purge_old_analytics()` | daily |
 

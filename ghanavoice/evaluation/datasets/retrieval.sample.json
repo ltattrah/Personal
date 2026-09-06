@@ -28,5 +28,7 @@
   { "id": "r-027", "language": "gaa", "question": "oshara nɔmba polisi", "relevantEntryIds": ["emergency-numbers"] },
   { "id": "r-028", "language": "gaa", "question": "gbekɛ skul kindergarten afii", "relevantEntryIds": ["basic-school-enrolment"] },
   { "id": "r-029", "language": "en", "question": "Free SHS what is covered", "relevantEntryIds": ["free-shs-placement"] },
-  { "id": "r-030", "language": "en", "question": "planting for food and jobs registration", "relevantEntryIds": ["planting-for-food-and-jobs"] }
+  { "id": "r-030", "language": "en", "question": "planting for food and jobs registration", "relevantEntryIds": ["planting-for-food-and-jobs"] },
+  { "id": "r-031", "language": "en", "question": "worms on my maize", "relevantEntryIds": ["fall-armyworm-management"], "variant": "plural of keyword" },
+  { "id": "r-032", "language": "en", "question": "baby vaccines free", "relevantEntryIds": ["child-immunisation"], "variant": "plural of keyword" }
 ]

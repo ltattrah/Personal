@@ -5,8 +5,10 @@ export default function AdminHome() {
   const cards = [
     { href: '/admin/content', title: 'Content review and publishing', body: 'Draft → in review → approved → published. Separation of duties, source verification gate, health flag gate.' },
     { href: '/admin/glossary', title: 'Glossary and terminology', body: 'Approved terms per language variety, Asante/Akuapem distinctions, terms to avoid.' },
+    { href: '/admin/queue', title: 'Queue: escalations, suggestions, audio', body: 'Citizens who asked for a person, wording corrections to triage, and consented recordings awaiting a native-speaker transcript.' },
     { href: '/admin/evaluation', title: 'Evaluation dashboard', body: 'Transcription accuracy, translation quality, unsafe-answer rate, regional variation, native-speaker review coverage.' },
     { href: '/admin/analytics', title: 'Usage analytics', body: 'Aggregate counts only: languages, outcomes, safety triggers, feedback. No conversation text is stored.' },
+    { href: '/admin/api-keys', title: 'API keys and licences', body: 'Issue and revoke keys for API and organisation-assistant plans; monthly usage against quota.' },
   ];
   return (
     <AdminFrame title="Overview">

@@ -35,6 +35,14 @@ Enforced in `src/lib/admin/auth.ts` (`canTransition`) and in SQL (`kb_set_status
 - Text is summarised in editors' own words; quotations must fall within the source's licence.
 - The bundled sample content was written by the engineering team from public information and must be re-verified by the deploying institution before publishing (`npm run kb:seed -- --as-draft`).
 
+## Native-speaker sign-off
+
+Reviewers with the `reviewer` role record a review per rendering from the Content review page (click a language chip) or via `POST /api/admin/review` with scores 1–5 for adequacy, fluency, register and orthography plus an optional comment. The rendering is marked `nativeReviewed` with reviewer and date only when every score is 4 or higher; otherwise it stays unreviewed and the scores and comment are written to the audit trail for the editor. In full mode, only users whose `native_reviewer_for` includes the language should perform this review (enforced by policy; the API records who did it).
+
+## Queue
+
+`/admin/queue` shows escalation tickets (take, close), citizen wording suggestions (accept, reject) and consented audio awaiting a human transcript with a short-lived signed playback URL. Accepting a suggestion is a decision record; the editor then edits the entry, which returns it to draft.
+
 ## Feedback loop
 
 - Citizen "translation" and "wrong" reports appear as counts in analytics and as suggestions in `feedback_suggestions`.

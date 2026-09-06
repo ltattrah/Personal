@@ -3,6 +3,7 @@ import { z } from 'zod';
 import { LANGUAGE_CODES } from '@/lib/i18n/languages';
 import { getAnalyticsSink, sessionHash } from '@/lib/analytics/events';
 import { badRequest, json, serverError } from '@/lib/http';
+import { getOpsStore } from '@/lib/ops/store';
 
 export const runtime = 'nodejs';
 
@@ -38,20 +39,16 @@ export async function POST(req: NextRequest) {
   const b = parsed.data;
   try {
     const reference = `GV-${Date.now().toString(36).toUpperCase()}-${Math.random().toString(36).slice(2, 6).toUpperCase()}`;
-    if (process.env.GHANAVOICE_MODE === 'full') {
-      const { getServiceClient } = await import('@/lib/db/supabase');
-      const { error } = await getServiceClient().from('escalations').insert({
-        reference,
-        language: b.language,
-        domain: b.domain,
-        entry_ids: b.entryIds,
-        question: b.question,
-        contact_method: b.contact.method,
-        contact_value: b.contact.method === 'none' ? null : b.contact.value ?? null,
-        status: 'open',
-      });
-      if (error) throw error;
-    }
+    const store = await getOpsStore();
+    await store.createEscalation({
+      reference,
+      language: b.language as never,
+      domain: b.domain,
+      entryIds: b.entryIds,
+      question: b.question,
+      contactMethod: b.contact.method,
+      contactValue: b.contact.method === 'none' ? undefined : b.contact.value,
+    });
     const sink = await getAnalyticsSink();
     await sink.record({
       type: 'escalation',
@@ -61,7 +58,7 @@ export async function POST(req: NextRequest) {
       domain: b.domain,
       entryIds: b.entryIds,
     });
-    return json({ reference, contact: CONTACTS[b.domain], stored: process.env.GHANAVOICE_MODE === 'full' });
+    return json({ reference, contact: CONTACTS[b.domain], stored: true });
   } catch (e) {
     return serverError(e);
   }

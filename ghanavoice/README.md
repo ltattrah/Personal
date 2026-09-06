@@ -13,10 +13,11 @@ A low-bandwidth voice and text assistant that gives people in Ghana sourced publ
 | Retrieval-based answering with citations, confidence, abstention and safety rules | `src/lib/rag` |
 | Curated knowledge base (18 entries, sources, dates, rights) and glossary | `content/` |
 | PostgreSQL / Supabase schema with pgvector, RLS, workflow functions, purge jobs | `supabase/migrations/0001_init.sql` |
-| Admin console: content workflow, glossary, evaluation dashboard, analytics | `src/app/admin`, `src/app/api/admin` |
-| Licensed API surface with hashed keys and quotas | `src/app/api/v1/ask`, `src/lib/billing` |
+| Admin console: content workflow, native-speaker sign-off, glossary, queue (escalations, suggestions, audio transcripts), evaluation dashboard, analytics, API keys | `src/app/admin`, `src/app/api/admin` |
+| Licensed API surface with hashed keys, quotas and organisation scoping | `src/app/api/v1/ask`, `src/lib/billing`, `src/lib/ops` |
+| Audio purge edge function, Dockerfile, GitHub Actions CI | `supabase/functions/purge-audio`, `Dockerfile`, `.github/workflows/ghanavoice-ci.yml` (repo root) |
 | Evaluation datasets, schemas and Python metric scripts (WER, chrF) | `evaluation/` |
-| Tests (Vitest, 49) and Python unit tests | `tests/`, `evaluation/scripts/test_compute_metrics.py` |
+| Tests (Vitest, 56) and Python unit tests | `tests/`, `evaluation/scripts/test_compute_metrics.py` |
 | Documentation: requirements, responsible AI, flows, schema, adapters, evaluation, validation, deployment, monetisation, workflow | `docs/` |
 
 ## Quick start (demo mode, no database)
@@ -40,7 +41,7 @@ Admin console at `/admin` (token `change-me`). Demo API key for `POST /api/v1/as
 ## Checks
 
 ```bash
-npm test                 # 49 unit and pipeline tests
+npm test                 # 56 unit and pipeline tests
 npm run typecheck
 npm run build
 npm run kb:validate      # content schema and per-language coverage

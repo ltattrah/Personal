@@ -34,8 +34,10 @@ export function AdminFrame({ children, title }: { children: ReactNode; title: st
     ['/admin', 'Overview'],
     ['/admin/content', 'Content review'],
     ['/admin/glossary', 'Glossary'],
+    ['/admin/queue', 'Queue'],
     ['/admin/evaluation', 'Evaluation'],
     ['/admin/analytics', 'Analytics'],
+    ['/admin/api-keys', 'API keys'],
   ];
   if (!ready) return null;
   return (
