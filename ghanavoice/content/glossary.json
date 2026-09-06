@@ -1,0 +1,107 @@
+[
+  { "id": "g-ghana-card", "concept": "ghana-card", "domain": "public-service", "en": "Ghana Card", "updatedOn": "2026-09-01",
+    "renderings": {
+      "ak-asante": { "term": "Ghana Card", "note": "Borrowed term; keep in English", "approved": false },
+      "ak-akuapem": { "term": "Ghana Card", "note": "Borrowed term; keep in English", "approved": false },
+      "ee": { "term": "Ghana Card", "approved": false },
+      "gaa": { "term": "Ghana Card", "approved": false }
+    } },
+  { "id": "g-farmer", "concept": "farmer", "domain": "agriculture", "en": "farmer", "updatedOn": "2026-09-01",
+    "renderings": {
+      "ak-asante": { "term": "okuafo", "approved": false },
+      "ak-akuapem": { "term": "okuafo", "approved": false },
+      "ee": { "term": "agbledela", "approved": false },
+      "gaa": { "term": "okwaafonyo", "approved": false }
+    } },
+  { "id": "g-maize", "concept": "maize", "domain": "agriculture", "en": "maize", "updatedOn": "2026-09-01",
+    "renderings": {
+      "ak-asante": { "term": "aburo", "approved": false },
+      "ak-akuapem": { "term": "aburow", "note": "Akuapem spelling differs from Asante 'aburo'", "approved": false },
+      "ee": { "term": "bli", "approved": false },
+      "gaa": { "term": "abele", "approved": false }
+    } },
+  { "id": "g-cocoa", "concept": "cocoa", "domain": "agriculture", "en": "cocoa", "updatedOn": "2026-09-01",
+    "renderings": {
+      "ak-asante": { "term": "kookoo", "approved": false },
+      "ak-akuapem": { "term": "kookoo", "approved": false },
+      "ee": { "term": "kokoo", "approved": false },
+      "gaa": { "term": "kookoo", "approved": false }
+    } },
+  { "id": "g-farm", "concept": "farm", "domain": "agriculture", "en": "farm", "updatedOn": "2026-09-01",
+    "renderings": {
+      "ak-asante": { "term": "afuo", "approved": false },
+      "ak-akuapem": { "term": "afuw", "note": "Akuapem spelling", "approved": false },
+      "ee": { "term": "agble", "approved": false },
+      "gaa": { "term": "ŋmɔ", "approved": false }
+    } },
+  { "id": "g-fertiliser", "concept": "fertiliser", "domain": "agriculture", "en": "fertiliser", "updatedOn": "2026-09-01",
+    "renderings": {
+      "ak-asante": { "term": "nnɔbae aduru", "note": "Literally 'crop medicine'; some speakers use 'fɛtelaeza'", "approved": false },
+      "ak-akuapem": { "term": "nnɔbae aduru", "approved": false },
+      "ee": { "term": "anyigba ƒe atike", "approved": false },
+      "gaa": { "term": "fertilizer", "note": "Borrowed", "approved": false }
+    } },
+  { "id": "g-extension-agent", "concept": "extension-agent", "domain": "agriculture", "en": "agricultural extension agent", "updatedOn": "2026-09-01",
+    "renderings": {
+      "ak-asante": { "term": "kuayɛ ɔkyerɛkyerɛfo", "approved": false },
+      "ak-akuapem": { "term": "kuayɛ ɔkyerɛkyerɛfo", "approved": false },
+      "ee": { "term": "agbledɔdzikpɔla", "approved": false },
+      "gaa": { "term": "ŋmɔtsɔɔlɔ", "approved": false }
+    } },
+  { "id": "g-school", "concept": "school", "domain": "education", "en": "school", "updatedOn": "2026-09-01",
+    "renderings": {
+      "ak-asante": { "term": "sukuu", "approved": false },
+      "ak-akuapem": { "term": "sukuu", "approved": false },
+      "ee": { "term": "suku", "approved": false },
+      "gaa": { "term": "skul", "approved": false }
+    } },
+  { "id": "g-exam", "concept": "examination", "domain": "education", "en": "examination", "updatedOn": "2026-09-01",
+    "renderings": {
+      "ak-asante": { "term": "nsɔhwɛ", "approved": false },
+      "ak-akuapem": { "term": "nsɔhwɛ", "approved": false },
+      "ee": { "term": "dodokpɔ", "approved": false },
+      "gaa": { "term": "kaa", "approved": false }
+    } },
+  { "id": "g-hospital", "concept": "hospital", "domain": "health", "en": "hospital / health facility", "updatedOn": "2026-09-01",
+    "renderings": {
+      "ak-asante": { "term": "ayaresabea", "approved": false },
+      "ak-akuapem": { "term": "ayaresabea", "approved": false },
+      "ee": { "term": "kɔdzi", "approved": false },
+      "gaa": { "term": "helatsamɔhe", "approved": false }
+    } },
+  { "id": "g-malaria", "concept": "malaria", "domain": "health", "en": "malaria", "updatedOn": "2026-09-01",
+    "renderings": {
+      "ak-asante": { "term": "atiridii", "note": "Also used loosely for 'fever'; disambiguate in context", "approved": false },
+      "ak-akuapem": { "term": "atiridii", "approved": false },
+      "ee": { "term": "asrã", "approved": false },
+      "gaa": { "term": "atridii", "approved": false }
+    } },
+  { "id": "g-emergency", "concept": "emergency", "domain": "general", "en": "emergency", "updatedOn": "2026-09-01",
+    "renderings": {
+      "ak-asante": { "term": "ɔhaw a ɛyɛ den", "approved": false },
+      "ak-akuapem": { "term": "ɔhaw a ɛyɛ den", "approved": false },
+      "ee": { "term": "xaxa", "approved": false },
+      "gaa": { "term": "oshara", "approved": false }
+    } },
+  { "id": "g-government", "concept": "government", "domain": "general", "en": "government", "updatedOn": "2026-09-01",
+    "renderings": {
+      "ak-asante": { "term": "aban", "approved": false },
+      "ak-akuapem": { "term": "aban", "approved": false },
+      "ee": { "term": "dziɖuɖu", "approved": false },
+      "gaa": { "term": "nɔyeli", "approved": false }
+    } },
+  { "id": "g-child", "concept": "child", "domain": "general", "en": "child", "updatedOn": "2026-09-01",
+    "renderings": {
+      "ak-asante": { "term": "abɔfra", "approved": false },
+      "ak-akuapem": { "term": "abofra", "note": "Akuapem spelling without ɔ", "approved": false },
+      "ee": { "term": "ɖevi", "approved": false },
+      "gaa": { "term": "gbekɛ", "approved": false }
+    } },
+  { "id": "g-water", "concept": "water", "domain": "general", "en": "water", "updatedOn": "2026-09-01",
+    "renderings": {
+      "ak-asante": { "term": "nsuo", "approved": false },
+      "ak-akuapem": { "term": "nsu", "note": "Akuapem spelling", "approved": false },
+      "ee": { "term": "tsi", "approved": false },
+      "gaa": { "term": "nu", "approved": false }
+    } }
+]

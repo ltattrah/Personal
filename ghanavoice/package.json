@@ -1,0 +1,40 @@
+{
+  "name": "ghanavoice",
+  "version": "0.1.0",
+  "private": true,
+  "description": "GhanaVoice: low-bandwidth voice and text assistant for Twi, Ewe, Ga and English",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "kb:validate": "tsx scripts/validate-content.ts",
+    "kb:seed": "tsx scripts/seed-supabase.ts",
+    "eval:metrics": "python3 evaluation/scripts/compute_metrics.py",
+    "samples:audio": "python3 scripts/generate_sample_audio.py"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.115.0",
+    "next": "15.5.25",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "zod": "^3.24.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.4.49",
+    "tailwindcss": "^3.4.19",
+    "tsx": "^4.19.0",
+    "typescript": "^5.7.0",
+    "vitest": "^3.0.0"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

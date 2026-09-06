@@ -1,0 +1,111 @@
+[
+  {
+    "id": "malaria-prevention",
+    "domain": "health",
+    "topic": "health/malaria",
+    "healthGeneralInfoOnly": true,
+    "updatedOn": "2026-09-01",
+    "reviewBy": "2027-03-01",
+    "status": "published",
+    "regions": [],
+    "sources": [
+      {
+        "title": "Malaria prevention: sleeping under treated nets and early testing",
+        "publisher": "Ghana Health Service, National Malaria Elimination Programme",
+        "url": "https://www.ghs.gov.gh",
+        "verifiedOn": "2026-09-01",
+        "rights": "Public health information from a Government of Ghana agency; summarised"
+      },
+      {
+        "title": "Malaria fact sheet",
+        "publisher": "World Health Organization",
+        "url": "https://www.who.int/news-room/fact-sheets/detail/malaria",
+        "verifiedOn": "2026-09-01",
+        "rights": "WHO fact sheet; summarised under WHO's terms for non-commercial informational reuse"
+      }
+    ],
+    "escalation": { "label": "Nearest CHPS compound, clinic or hospital" },
+    "renderings": [
+      {
+        "language": "en",
+        "title": "Preventing malaria",
+        "summary": "Sleep under an insecticide-treated net every night, clear standing water around the home, and go to a health facility for a test if you or a child has fever. Do not treat fever at home without a test.",
+        "body": "Malaria is spread by mosquitoes and is common across Ghana.\n\nPrevention:\n- Sleep under a long-lasting insecticide-treated net every night, including children and pregnant women.\n- Remove or cover standing water in containers, tyres and gutters where mosquitoes breed.\n- Use window screens and wear long sleeves in the evening where possible.\n- Pregnant women should attend antenatal clinic, where preventive medicine is given.\n\nIf you or your child has fever, chills or body pains, go to a health facility for a malaria test. Only a trained health worker can confirm malaria and give the right treatment. This assistant does not diagnose illness or recommend medicines.",
+        "keywords": ["malaria", "mosquito", "fever", "net", "treated net", "prevention"],
+        "origin": "editor",
+        "nativeReviewed": false
+      },
+      {
+        "language": "ak-asante",
+        "title": "Atiridii ho banbɔ",
+        "summary": "Da ntontom ntama a wɔde aduru ayɛ ase anadwo biara, yi nsu a egyina hɔ fi fie ho, na sɛ wo anaa abɔfra bi ho hyehye a, kɔ ayaresabea kɔsɔ hwɛ. Nsa yare wɔ fie a wɔnsɔ nhwɛe.",
+        "body": "Ntontom de atiridii ba na ɛwɔ Ghana baabiara.\n\n- Da ntontom ntama a wɔde aduru ayɛ ase anadwo biara.\n- Yi nsu a egyina hɔ fi mfonoa, tayaa ne nsuka mu.\n- Apemfo nkɔ awoɔ ho adwenkyerɛ mma wɔmma wɔn aduru a ɛbɔ wɔn ho ban.\n\nSɛ wo anaa w'abɔfra ho hyehye a, kɔ ayaresabea. Ayaresabea nnipa nkutoo na wobetumi ahwɛ na wɔama aduru. Saa mmoafo yi nkyerɛ yare, na ɔmma aduru.",
+        "keywords": ["atiridii", "ntontom", "ntama", "ayaresabea", "ho hyehye"],
+        "origin": "editor",
+        "nativeReviewed": false
+      }
+    ]
+  },
+  {
+    "id": "safe-water-cholera",
+    "domain": "health",
+    "topic": "health/safe-water",
+    "healthGeneralInfoOnly": true,
+    "updatedOn": "2026-09-01",
+    "reviewBy": "2027-03-01",
+    "status": "published",
+    "regions": [],
+    "sources": [
+      {
+        "title": "Cholera prevention and safe water advice",
+        "publisher": "Ghana Health Service",
+        "url": "https://www.ghs.gov.gh",
+        "verifiedOn": "2026-09-01",
+        "rights": "Public health information from a Government of Ghana agency; summarised"
+      }
+    ],
+    "escalation": { "label": "Nearest clinic or hospital; national emergency line 112", "phone": "112" },
+    "renderings": [
+      {
+        "language": "en",
+        "title": "Safe water and preventing cholera",
+        "summary": "Drink only treated, boiled or sachet water from a trusted source, wash hands with soap after the toilet and before eating, and cook food thoroughly. Anyone with sudden watery diarrhoea should go to a health facility at once.",
+        "body": "Cholera and other diarrhoeal diseases spread through water and food contaminated by faeces. Outbreaks happen in Ghana, especially in the rainy season and in crowded areas.\n\nPrevention:\n- Drink water that has been boiled, chlorinated or filtered, or sealed sachet or bottled water from a trusted brand.\n- Wash hands with soap and clean water after using the toilet, after changing a baby, and before preparing or eating food.\n- Cook food well and eat it hot; keep food covered.\n- Use a toilet or latrine; never defecate in the open or near water sources.\n\nSudden watery diarrhoea, especially with vomiting, can cause dangerous dehydration within hours. Take the person to the nearest health facility immediately and keep giving clean fluids on the way. This assistant does not diagnose or treat illness.",
+        "keywords": ["cholera", "diarrhoea", "diarrhea", "safe water", "boil water", "hand washing", "hygiene"],
+        "origin": "editor",
+        "nativeReviewed": false
+      }
+    ]
+  },
+  {
+    "id": "child-immunisation",
+    "domain": "health",
+    "topic": "health/immunisation",
+    "healthGeneralInfoOnly": true,
+    "updatedOn": "2026-09-01",
+    "reviewBy": "2027-03-01",
+    "status": "published",
+    "regions": [],
+    "sources": [
+      {
+        "title": "Expanded Programme on Immunisation: routine childhood vaccination",
+        "publisher": "Ghana Health Service",
+        "url": "https://www.ghs.gov.gh",
+        "verifiedOn": "2026-09-01",
+        "rights": "Public health information from a Government of Ghana agency; summarised"
+      }
+    ],
+    "escalation": { "label": "Child welfare clinic at your nearest CHPS compound or health centre" },
+    "renderings": [
+      {
+        "language": "en",
+        "title": "Free childhood vaccines",
+        "summary": "Routine childhood vaccines are free at child welfare clinics in Ghana. Take your baby with the child health record book at birth, then at 6, 10 and 14 weeks, at 6, 9 and 18 months, following the dates the nurse writes in the book.",
+        "body": "The Ghana Health Service gives free vaccines to children through the Expanded Programme on Immunisation. Vaccines protect against diseases including tuberculosis, polio, measles, rubella, yellow fever, pneumonia and rotavirus diarrhoea.\n\nVisits usually happen at birth, 6 weeks, 10 weeks, 14 weeks, 6 months, 9 months and 18 months. The exact vaccines at each visit are listed in the child health record book (weighing card) that the nurse gives you.\n\nGo to the child welfare clinic at your nearest CHPS compound, health centre or hospital. If you miss a visit, go as soon as possible; the child can still be vaccinated. Ask the nurse if you have questions about side effects or your child's health; this assistant cannot give medical advice.",
+        "keywords": ["vaccine", "immunisation", "immunization", "weighing", "child welfare clinic", "baby", "injection"],
+        "origin": "editor",
+        "nativeReviewed": false
+      }
+    ]
+  }
+]

@@ -1,0 +1,137 @@
+[
+  {
+    "id": "free-shs-placement",
+    "domain": "education",
+    "topic": "education/free-shs",
+    "updatedOn": "2026-09-01",
+    "reviewBy": "2027-03-01",
+    "status": "published",
+    "regions": [],
+    "sources": [
+      {
+        "title": "Free Senior High School policy and CSSPS placement",
+        "publisher": "Ministry of Education / Ghana Education Service",
+        "url": "https://www.moe.gov.gh",
+        "verifiedOn": "2026-09-01",
+        "rights": "Public information from Government of Ghana bodies; summarised"
+      }
+    ],
+    "escalation": { "label": "Ghana Education Service district office" },
+    "renderings": [
+      {
+        "language": "en",
+        "title": "Free SHS and school placement",
+        "summary": "Students who pass the BECE are placed in senior high schools through the Computerised School Selection and Placement System (CSSPS). Under Free SHS, tuition and core fees at public senior high schools are paid by government.",
+        "body": "After the Basic Education Certificate Examination (BECE), pupils choose schools and are placed by the Computerised School Selection and Placement System (CSSPS). Placement results are checked online or by SMS using a placement voucher.\n\nThe Free SHS policy covers tuition, textbooks, and boarding or day meals at public senior high schools. Some optional items such as personal effects are not covered.\n\nIf a pupil is not placed or wants to change school, the self-placement option on the CSSPS portal allows choosing a school with vacancies. Contact your district GES office for help.",
+        "keywords": ["free SHS", "placement", "CSSPS", "senior high school", "BECE", "school", "fees"],
+        "origin": "editor",
+        "nativeReviewed": false
+      },
+      {
+        "language": "ak-asante",
+        "title": "Free SHS ne sukuu mu hyehyɛ",
+        "summary": "Wɔde CSSPS hyehyɛ sukuufo a wɔdi BECE mu nkonim kɔ SHS. Aban tua sukuu ka ne nhoma ka wɔ aban SHS ahorow mu.",
+        "body": "BECE akyi no, wɔde Computerised School Selection and Placement System (CSSPS) hyehyɛ sukuufo kɔ SHS. Wobɛtumi ahwɛ wo hyehyɛ no wɔ intanɛt so anaa SMS.\n\nFree SHS tua sukuu ka, nhoma, ne aduan wɔ aban SHS mu. Nneɛma bi te sɛ ankorankoro nneɛma nka ho.\n\nSɛ wɔanhyehyɛ wo a, wobɛtumi de self-placement apaw sukuu a ɛwɔ kwan. Kɔ GES ɔfese a ɛbɛn wo.",
+        "keywords": ["Free SHS", "CSSPS", "sukuu", "BECE", "hyehyɛ"],
+        "origin": "editor",
+        "nativeReviewed": false
+      }
+    ]
+  },
+  {
+    "id": "bece-wassce-results",
+    "domain": "education",
+    "topic": "education/exams",
+    "updatedOn": "2026-09-01",
+    "reviewBy": "2027-03-01",
+    "status": "published",
+    "regions": [],
+    "sources": [
+      {
+        "title": "Checking BECE and WASSCE results",
+        "publisher": "West African Examinations Council (WAEC), Ghana",
+        "url": "https://www.waecgh.org",
+        "verifiedOn": "2026-09-01",
+        "rights": "Public information from the examining body; summarised"
+      }
+    ],
+    "renderings": [
+      {
+        "language": "en",
+        "title": "BECE and WASSCE: what they are and how to check results",
+        "summary": "The BECE is taken at the end of junior high school and the WASSCE at the end of senior high school. Results are checked on the WAEC Ghana results website using a results checker card or e-voucher.",
+        "body": "The Basic Education Certificate Examination (BECE) is written in JHS 3 and is used for placement into senior high schools. The West African Senior School Certificate Examination (WASSCE) is written in SHS 3 and is used for admission to tertiary institutions.\n\nTo check results, buy a WAEC results checker card or e-voucher from an authorised vendor, go to the WAEC Ghana results portal, and enter your index number, examination year and the card details.\n\nBeware of anyone offering to change grades or sell results; WAEC does not do this and it is a crime.",
+        "keywords": ["BECE", "WASSCE", "WAEC", "results", "exam", "checker", "index number"],
+        "origin": "editor",
+        "nativeReviewed": false
+      }
+    ]
+  },
+  {
+    "id": "basic-school-enrolment",
+    "domain": "education",
+    "topic": "education/enrolment",
+    "updatedOn": "2026-09-01",
+    "reviewBy": "2027-03-01",
+    "status": "published",
+    "regions": [],
+    "sources": [
+      {
+        "title": "Structure of basic education and enrolment age",
+        "publisher": "Ghana Education Service",
+        "url": "https://ges.gov.gh",
+        "verifiedOn": "2026-09-01",
+        "rights": "Public information from a Government of Ghana agency; summarised"
+      }
+    ],
+    "renderings": [
+      {
+        "language": "en",
+        "title": "Enrolling a child in basic school",
+        "summary": "Basic education in Ghana is free and compulsory. Children normally start kindergarten at age 4 and Primary 1 at age 6. Enrol at the nearest public school with the child's birth certificate or weighing card.",
+        "body": "Basic education covers two years of kindergarten, six years of primary and three years of junior high school. Public basic schools do not charge tuition.\n\nTo enrol, visit the head teacher of the nearest public school at the start of the academic year. Bring the child's birth certificate or child health record card as proof of age, and any previous school report if transferring.\n\nChildren who missed school can still be enrolled; the school will assess the appropriate class.",
+        "keywords": ["enrol", "kindergarten", "primary", "JHS", "school age", "basic school", "admission"],
+        "origin": "editor",
+        "nativeReviewed": false
+      },
+      {
+        "language": "gaa",
+        "title": "Gbekɛ ŋmaa yɛ skul",
+        "summary": "Ghana maŋ lɛ skul shishijee ji nɔ ni akɛ shika ewoo. Gbekɛbii bɔiɔ kindergarten kɛ afii 4 ni amɛbɔiɔ Primary 1 kɛ afii 6. Yaa skul ni bɛŋkɛ bo kɛ gbekɛ lɛ fɔmɔ wolo.",
+        "body": "Skul shishijee ji kindergarten afii enyɔ, primary afii ekpaa kɛ JHS afii etɛ. Maŋ skuli lɛ heee skul shika.\n\nYaa skul lɛ nɔkwɛlɔ ŋɔɔ kɛ gbekɛ lɛ fɔmɔ wolo loo weighing card.\n\nGbekɛbii ni ekɛ skul ehiii lɛ hu baanyɛ aya skul.",
+        "keywords": ["skul", "gbekɛ", "kindergarten", "primary"],
+        "origin": "editor",
+        "nativeReviewed": false
+      }
+    ]
+  },
+  {
+    "id": "adult-literacy-classes",
+    "domain": "education",
+    "topic": "education/adult-literacy",
+    "updatedOn": "2026-09-01",
+    "reviewBy": "2027-03-01",
+    "status": "published",
+    "regions": [],
+    "sources": [
+      {
+        "title": "Complementary education and adult literacy programmes",
+        "publisher": "Complementary Education Agency (formerly Non-Formal Education Division), Ministry of Education",
+        "url": "https://www.moe.gov.gh",
+        "verifiedOn": "2026-09-01",
+        "rights": "Public information from a Government of Ghana agency; summarised"
+      }
+    ],
+    "renderings": [
+      {
+        "language": "en",
+        "title": "Adult literacy classes in Ghanaian languages",
+        "summary": "The Complementary Education Agency runs free adult literacy classes in Ghanaian languages, including Twi, Ewe and Ga, through district offices and community facilitators.",
+        "body": "Adults who did not complete school can join literacy classes run by the Complementary Education Agency of the Ministry of Education. Classes teach reading, writing and numeracy in a Ghanaian language first, with English introduced later.\n\nClasses are usually held in the evening in community centres, churches, mosques or schools. Ask at your district assembly or district education office for the nearest class and facilitator.",
+        "keywords": ["adult literacy", "reading", "writing", "night school", "non-formal", "learn to read"],
+        "origin": "editor",
+        "nativeReviewed": false
+      }
+    ]
+  }
+]

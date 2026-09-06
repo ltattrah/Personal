@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="GhanaVoice">
+  <rect width="512" height="512" rx="96" fill="#1f5636"/>
+  <g fill="none" stroke="#f9ecb8" stroke-width="28" stroke-linecap="round">
+    <path d="M256 128v160"/>
+    <path d="M196 176v64"/>
+    <path d="M316 176v64"/>
+    <path d="M136 208v0"/>
+    <path d="M376 208v0"/>
+  </g>
+  <path d="M176 352c40 40 120 40 160 0" fill="none" stroke="#c99a12" stroke-width="28" stroke-linecap="round"/>
+</svg>

@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "GhanaVoice STT evaluation item",
+  "type": "object",
+  "required": ["id", "language", "speaker", "audioPath", "reference", "condition", "rights"],
+  "properties": {
+    "id": { "type": "string" },
+    "language": { "enum": ["en", "ak-asante", "ak-akuapem", "ee", "gaa"] },
+    "region": { "type": "string" },
+    "speaker": {
+      "type": "object",
+      "required": ["id", "consentId"],
+      "properties": {
+        "id": { "type": "string" },
+        "gender": { "enum": ["f", "m", "x"] },
+        "ageBand": { "enum": ["18-29", "30-49", "50+"] },
+        "consentId": { "type": "string", "description": "Reference to a signed consent form stored outside the repository" }
+      }
+    },
+    "audioPath": { "type": "string" },
+    "reference": { "type": "string" },
+    "condition": { "enum": ["quiet", "market", "road", "indoor-fan", "phone-line"] },
+    "rights": { "type": "string" }
+  }
+}

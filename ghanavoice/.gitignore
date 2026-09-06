@@ -1,0 +1,12 @@
+node_modules
+.next
+out
+.env
+.env.local
+.env.*.local
+*.tsbuildinfo
+next-env.d.ts
+coverage
+__pycache__
+evaluation/results/*.json
+content/samples/audio/generated/*.wav

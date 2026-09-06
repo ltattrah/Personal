@@ -1,0 +1,178 @@
+[
+  {
+    "id": "planting-for-food-and-jobs",
+    "domain": "agriculture",
+    "topic": "agriculture/inputs",
+    "updatedOn": "2026-09-01",
+    "reviewBy": "2027-03-01",
+    "status": "published",
+    "regions": [],
+    "sources": [
+      {
+        "title": "Planting for Food and Jobs (PFJ) programme information",
+        "publisher": "Ministry of Food and Agriculture (MoFA)",
+        "url": "https://mofa.gov.gh",
+        "verifiedOn": "2026-09-01",
+        "rights": "Public information from a Government of Ghana ministry; summarised"
+      }
+    ],
+    "escalation": { "label": "District Department of Agriculture" },
+    "renderings": [
+      {
+        "language": "en",
+        "title": "Getting support under Planting for Food and Jobs",
+        "summary": "Planting for Food and Jobs is the government programme that helps farmers get seeds, fertiliser and extension advice. Register with your district Department of Agriculture through your agricultural extension agent to take part.",
+        "body": "Planting for Food and Jobs (PFJ) is run by the Ministry of Food and Agriculture. Its second phase moved from direct input subsidies to an input-credit model where registered farmers receive inputs through approved aggregators and repay after harvest.\n\nTo take part:\n1. Contact the agricultural extension agent (AEA) for your area or the district Department of Agriculture.\n2. Register as a farmer with your Ghana Card and details of your farm.\n3. Ask which crops and inputs are covered in your district this season.\n\nProgramme rules and covered crops change each season, so confirm details with your district office before planting.",
+        "keywords": ["PFJ", "planting for food and jobs", "fertiliser", "fertilizer", "seeds", "subsidy", "inputs", "farmer registration"],
+        "origin": "editor",
+        "nativeReviewed": false
+      },
+      {
+        "language": "ak-asante",
+        "title": "Mmoa a wubenya wɔ Planting for Food and Jobs ase",
+        "summary": "Planting for Food and Jobs yɛ aban nhyehyɛe a ɛboa akuafo ma wonya aba, nnɔbae aduru ne afotu. Kyerɛw wo din wɔ mansini kuayɛ ɔfese anaa wo kuayɛ ɔkyerɛkyerɛfo hɔ.",
+        "body": "Planting for Food and Jobs (PFJ) yɛ Ministry of Food and Agriculture nhyehyɛe. Sɛnea ɛte seesei, akuafo a wɔakyerɛw wɔn din nya nnɔbae nneɛma sɛ bosea na wotua akyi otwa bere.\n\n1. Kɔ wo mpɔtam kuayɛ ɔkyerɛkyerɛfo (AEA) anaa mansini kuayɛ ɔfese hɔ.\n2. Fa wo Ghana Card ne w'afuo ho nsɛm kyerɛw wo din.\n3. Bisa nnɔbae a wɔboa wɔ wo mansini mu saa bere yi.\n\nNsɛm yi sesa afe biara; bisa wo mansini ɔfese ansa na wudua.",
+        "keywords": ["PFJ", "nnɔbae aduru", "aba", "akuafo", "kuayɛ", "afuo"],
+        "origin": "editor",
+        "nativeReviewed": false
+      }
+    ]
+  },
+  {
+    "id": "fall-armyworm-management",
+    "domain": "agriculture",
+    "topic": "agriculture/pests",
+    "updatedOn": "2026-09-01",
+    "reviewBy": "2027-03-01",
+    "status": "published",
+    "regions": [],
+    "sources": [
+      {
+        "title": "Fall armyworm: integrated management guidance for smallholders",
+        "publisher": "Ministry of Food and Agriculture (MoFA) / FAO",
+        "url": "https://www.fao.org/fall-armyworm",
+        "verifiedOn": "2026-09-01",
+        "rights": "FAO open-access guidance and Government of Ghana extension material; summarised"
+      }
+    ],
+    "escalation": { "label": "Agricultural extension agent (district Department of Agriculture)" },
+    "renderings": [
+      {
+        "language": "en",
+        "title": "Controlling fall armyworm on maize",
+        "summary": "Check maize fields at least once a week from two weeks after planting. If you see ragged holes, sawdust-like droppings or caterpillars in the funnel, hand-pick early and ask your extension agent which approved treatment to use.",
+        "body": "Fall armyworm is a caterpillar that damages maize, sorghum and other crops. Early detection matters most.\n\nWhat to do:\n- Scout the field at least weekly from the second week after planting. Look for ragged holes in leaves, moist sawdust-like frass in the funnel, and egg masses under leaves.\n- If fewer than about one in five plants are affected, crush egg masses and hand-pick caterpillars in the early morning or evening.\n- Plant early and at the same time as neighbours to avoid staggered fields that keep the pest going.\n- Encourage natural enemies by keeping field borders with flowering plants.\n- If damage is heavy, ask your agricultural extension agent which registered product is recommended for your area and follow the label exactly, wearing protective clothing. Do not use unregistered chemicals.",
+        "keywords": ["fall armyworm", "armyworm", "caterpillar", "maize pest", "worm", "pesticide", "scouting"],
+        "origin": "editor",
+        "nativeReviewed": false
+      },
+      {
+        "language": "ee",
+        "title": "Bli dzi ŋɔwo (fall armyworm) dzi ɖuɖu",
+        "summary": "Kpɔ wò bliɖodzi ɖa zi ɖeka kwasiɖa sia kwasiɖa tso kwasiɖa evelia dzi le nudodo megbe. Ne èkpɔ dowo le aŋgbawo me alo ŋɔwo la, ƒo wo ɖa kaba eye nàbia wò agbledɔdzikpɔla be atike kae nàzã.",
+        "body": "Fall armyworm nye ŋɔ si gblẽa bli, kple nuku bubuwo. Ekpɔkpɔ kaba le vevie.\n\n- Kpɔ agble ɖa kwasiɖa sia kwasiɖa.\n- Ne bli ʋɛ aɖewo koe gblẽ la, ƒo ŋɔwo ɖa kple asi ŋdi kanya alo fiẽ.\n- Do nu kaba eye nàdo kple haviwo ɣeyiɣi ɖeka.\n- Ne gbegblẽa sɔgbɔ la, bia wò agbledɔdzikpɔla be atike kae woɖe mɔ na le wò nutome. Mègazã atike si womeɖe mɔ na o.",
+        "keywords": ["ŋɔ", "bli", "armyworm", "atike", "agble"],
+        "origin": "editor",
+        "nativeReviewed": false
+      }
+    ]
+  },
+  {
+    "id": "maize-planting-seasons",
+    "domain": "agriculture",
+    "topic": "agriculture/seasons",
+    "updatedOn": "2026-09-01",
+    "reviewBy": "2027-03-01",
+    "status": "published",
+    "regions": [],
+    "sources": [
+      {
+        "title": "Seasonal rainfall patterns and cropping calendar for Ghana",
+        "publisher": "Ghana Meteorological Agency / Ministry of Food and Agriculture",
+        "url": "https://www.meteo.gov.gh",
+        "verifiedOn": "2026-09-01",
+        "rights": "Public information from Government of Ghana agencies; summarised"
+      }
+    ],
+    "escalation": { "label": "Agricultural extension agent" },
+    "renderings": [
+      {
+        "language": "en",
+        "title": "When to plant maize in Ghana",
+        "summary": "Southern Ghana has two rainy seasons: the major season from about March to July and the minor season from about September to November. Northern Ghana has one season from about May to September. Plant maize after the rains have started reliably, and follow the seasonal forecast from the Ghana Meteorological Agency.",
+        "body": "Ghana's rainfall pattern differs by zone.\n\n- Forest and coastal zones (south): major season planting is usually March to April; minor season planting is usually late August to September.\n- Transition zone (Bono, Bono East, parts of Ashanti and Eastern): major season March to April, minor season August to September, with more reliable rains than the coast.\n- Northern savannah zone: one season; planting is usually May to June, harvest September to October.\n\nRainfall onset varies from year to year. Wait until the soil is moist to planting depth after two or three good rains, and listen to the seasonal forecast issued by the Ghana Meteorological Agency and your extension agent.",
+        "keywords": ["maize", "planting season", "rainy season", "when to plant", "major season", "minor season", "calendar"],
+        "origin": "editor",
+        "nativeReviewed": false
+      },
+      {
+        "language": "ak-asante",
+        "title": "Bere a wodua aburo wɔ Ghana",
+        "summary": "Anaafo Ghana wɔ osutɔ bere abien: bere kɛse fi Ɔbɛnem kosi Kitawonsa, ne bere ketewa fi Ɛbɔ kosi Ɔberɛfɛw. Atifi Ghana wɔ bere baako fi Kɔtɔnimma kosi Ɛbɔ. Dua aburo bere a osu atɔ yiye.",
+        "body": "Osutɔ wɔ Ghana gu ahorow.\n\n- Anaafo: bere kɛse dua fi Ɔbɛnem kosi Oforisuo; bere ketewa dua fi Ɔsannaa kosi Ɛbɔ.\n- Atifi: bere baako; dua fi Kɔtɔnimma kosi Ayɛwohomumu.\n\nOsu no bere sesa afe biara. Twɛn kosi sɛ asase no afɔw yiye ansa na wudua, na tie Ghana Meteorological Agency ne wo kuayɛ ɔkyerɛkyerɛfo afotu.",
+        "keywords": ["aburo", "dua", "osutɔ bere", "afuo"],
+        "origin": "editor",
+        "nativeReviewed": false
+      }
+    ]
+  },
+  {
+    "id": "cocoa-farmer-support",
+    "domain": "agriculture",
+    "topic": "agriculture/cocoa",
+    "updatedOn": "2026-09-01",
+    "reviewBy": "2027-03-01",
+    "status": "published",
+    "regions": ["Ashanti", "Western", "Western North", "Eastern", "Central", "Bono", "Ahafo", "Volta", "Oti"],
+    "sources": [
+      {
+        "title": "Cocoa farmer services and producer price announcements",
+        "publisher": "Ghana Cocoa Board (COCOBOD)",
+        "url": "https://cocobod.gh",
+        "verifiedOn": "2026-09-01",
+        "rights": "Public information from a Government of Ghana statutory body; summarised"
+      }
+    ],
+    "escalation": { "label": "COCOBOD district office / Cocoa Health and Extension Division" },
+    "renderings": [
+      {
+        "language": "en",
+        "title": "Support for cocoa farmers",
+        "summary": "Ghana Cocoa Board (COCOBOD) sets the cocoa producer price each season and runs farmer registration, mass spraying, hand pollination and rehabilitation programmes. Register with the Cocoa Health and Extension Division to access these services.",
+        "body": "COCOBOD announces the guaranteed producer price for cocoa at the start of each crop season, usually around September or October. Licensed buying companies must pay at least this price; the price changes yearly, so check the latest announcement rather than relying on remembered figures.\n\nServices available to registered farmers include free or subsidised mass spraying against pests and diseases, pruning and hand-pollination support, swollen-shoot rehabilitation, and a cocoa farmers' pension scheme.\n\nTo register, contact the Cocoa Health and Extension Division officer for your district with your Ghana Card and farm details.",
+        "keywords": ["cocoa", "COCOBOD", "producer price", "cocoa price", "mass spraying", "swollen shoot", "cocoa farmer"],
+        "origin": "editor",
+        "nativeReviewed": false
+      }
+    ]
+  },
+  {
+    "id": "extension-services",
+    "domain": "agriculture",
+    "topic": "agriculture/extension",
+    "updatedOn": "2026-09-01",
+    "reviewBy": "2027-03-01",
+    "status": "published",
+    "regions": [],
+    "sources": [
+      {
+        "title": "Agricultural extension services",
+        "publisher": "Ministry of Food and Agriculture, Directorate of Agricultural Extension Services",
+        "url": "https://mofa.gov.gh",
+        "verifiedOn": "2026-09-01",
+        "rights": "Public information from a Government of Ghana ministry; summarised"
+      }
+    ],
+    "renderings": [
+      {
+        "language": "en",
+        "title": "How to reach an agricultural extension agent",
+        "summary": "Every district has a Department of Agriculture with extension agents who give free advice on crops, livestock, pests and programmes. Visit the district assembly's agriculture office or ask your assembly member for your area's agent.",
+        "body": "Agricultural extension agents (AEAs) are government officers who advise farmers for free. They can help with planting advice, pest and disease identification, livestock care, farmer group formation and access to programmes such as Planting for Food and Jobs.\n\nTo find yours, go to the Department of Agriculture at your district or municipal assembly, or ask your assembly member or farmer group leader for the agent's phone number. Farmer field days and demonstration plots are announced through these offices.",
+        "keywords": ["extension agent", "extension officer", "AEA", "farm advice", "department of agriculture", "district"],
+        "origin": "editor",
+        "nativeReviewed": false
+      }
+    ]
+  }
+]

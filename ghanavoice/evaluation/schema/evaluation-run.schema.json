@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "GhanaVoice evaluation run",
+  "type": "object",
+  "required": ["task", "provider", "datasetVersion", "itemCount", "metrics", "nativeReferences"],
+  "properties": {
+    "task": { "enum": ["stt", "translation", "safety", "retrieval", "variation"] },
+    "language": { "enum": ["en", "ak-asante", "ak-akuapem", "ee", "gaa"] },
+    "provider": { "type": "string" },
+    "model": { "type": "string" },
+    "datasetVersion": { "type": "string" },
+    "itemCount": { "type": "integer", "minimum": 1 },
+    "metrics": { "type": "object", "additionalProperties": { "type": "number" } },
+    "caveats": { "type": "array", "items": { "type": "string" } },
+    "nativeReferences": { "type": "boolean", "description": "True only when every reference was produced or verified by a qualified native speaker" }
+  }
+}

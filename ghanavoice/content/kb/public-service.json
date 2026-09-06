@@ -1,0 +1,236 @@
+[
+  {
+    "id": "emergency-numbers",
+    "domain": "public-service",
+    "topic": "public-service/emergency",
+    "updatedOn": "2026-09-01",
+    "reviewBy": "2027-03-01",
+    "status": "published",
+    "regions": [],
+    "sources": [
+      {
+        "title": "Emergency numbers in Ghana (112 national emergency line)",
+        "publisher": "National Communications Authority / Ministry of the Interior",
+        "url": "https://nca.org.gh",
+        "verifiedOn": "2026-09-01",
+        "rights": "Factual public-safety information; Government of Ghana publications"
+      }
+    ],
+    "escalation": { "label": "National emergency line", "phone": "112" },
+    "renderings": [
+      {
+        "language": "en",
+        "title": "Emergency telephone numbers",
+        "summary": "Call 112 for any emergency in Ghana. You can also call 191 for police, 192 for fire service and 193 for ambulance.",
+        "body": "Ghana's national emergency number is 112. It works from any mobile network and connects you to police, fire or ambulance services.\n\nDirect lines:\n- Police: 191\n- Fire Service: 192\n- Ambulance (National Ambulance Service): 193\n\nWhen you call, say where you are, what has happened and how many people need help. Stay on the line until the operator tells you to hang up.",
+        "keywords": ["emergency", "police", "fire", "ambulance", "112", "191", "192", "193", "help", "accident"],
+        "origin": "editor",
+        "nativeReviewed": false
+      },
+      {
+        "language": "ak-asante",
+        "title": "Ɔhaw a ɛyɛ den ho telefon nɔma",
+        "summary": "Frɛ 112 sɛ ɔhaw kɛse bi asi. Wobɛtumi afrɛ 191 ama polisi, 192 ama ogya adwumakuo, 193 ama ambulance.",
+        "body": "Ghana ɔman no ɔhaw nɔma ne 112. Ɛyɛ adwuma wɔ network biara so.\n\n- Polisi: 191\n- Ogya adwumakuo: 192\n- Ambulance: 193\n\nSɛ wofrɛ a, ka baabi a wowɔ, nea asi, ne nnipa dodow a wɔhia mmoa.",
+        "keywords": ["ɔhaw", "polisi", "ogya", "ambulance", "112", "mmoa", "akwanhyia"],
+        "origin": "editor",
+        "nativeReviewed": false
+      },
+      {
+        "language": "ak-akuapem",
+        "title": "Ɔhaw a ɛyɛ den ho telefon nɔma",
+        "summary": "Frɛ 112 sɛ ɔhaw kɛse bi asi. Wubetumi afrɛ 191 ama polisi, 192 ama ogya adwumakuw, 193 ama ambulance.",
+        "body": "Ghana ɔman no ɔhaw nɔma ne 112. Ɛyɛ adwuma wɔ network biara so.\n\n- Polisi: 191\n- Ogya adwumakuw: 192\n- Ambulance: 193\n\nSɛ wufrɛ a, ka baabi a wuwɔ, nea asi, ne nnipa dodow a wohia mmoa.",
+        "keywords": ["ɔhaw", "polisi", "ogya", "ambulance", "112", "mmoa", "akwanhyia"],
+        "origin": "editor",
+        "nativeReviewed": false
+      },
+      {
+        "language": "ee",
+        "title": "Xaxa me kaƒoƒo xexlẽmewo",
+        "summary": "Yɔ 112 ne xaxa aɖe le edzi yim le Ghana. Àte ŋu ayɔ 191 na kpovitɔwo, 192 na dzotsilawo, 193 na ambulance.",
+        "body": "Ghana dukɔa ƒe xaxa me xexlẽme enye 112. Ewɔa dɔ le network ɖe sia ɖe dzi.\n\n- Kpovitɔwo: 191\n- Dzotsilawo: 192\n- Ambulance: 193\n\nNe èyɔ la, gblɔ afi si nèle, nu si dzɔ, kple ame nenie hiã kpekpeɖeŋu.",
+        "keywords": ["xaxa", "kpovitɔ", "dzo", "ambulance", "112", "kpekpeɖeŋu"],
+        "origin": "editor",
+        "nativeReviewed": false
+      },
+      {
+        "language": "gaa",
+        "title": "Oshara mli tsɛmɔ nɔmbai",
+        "summary": "Tsɛ 112 kɛ oshara ko ba yɛ Ghana. Obaanyɛ otsɛ 191 kɛha polisi, 192 kɛha la tsuji, 193 kɛha ambulance.",
+        "body": "Ghana maŋ lɛ oshara nɔmba ji 112. Etsuɔ nii yɛ network fɛɛ nɔ.\n\n- Polisi: 191\n- La tsuji: 192\n- Ambulance: 193\n\nKɛ otsɛ lɛ, kɛɛ he ni oyɔɔ, nɔ ni ba, kɛ mɛi abɔ ni hiɔ yelikɛbuamɔ.",
+        "keywords": ["oshara", "polisi", "la", "ambulance", "112", "yelikɛbuamɔ"],
+        "origin": "editor",
+        "nativeReviewed": false
+      }
+    ]
+  },
+  {
+    "id": "ghana-card-registration",
+    "domain": "public-service",
+    "topic": "public-service/ghana-card",
+    "updatedOn": "2026-09-01",
+    "reviewBy": "2027-03-01",
+    "status": "published",
+    "regions": [],
+    "sources": [
+      {
+        "title": "Ghana Card registration requirements",
+        "publisher": "National Identification Authority (NIA)",
+        "url": "https://nia.gov.gh",
+        "verifiedOn": "2026-09-01",
+        "rights": "Public information from a Government of Ghana agency; summarised in editors' own words"
+      }
+    ],
+    "escalation": { "label": "NIA district office", "url": "https://nia.gov.gh" },
+    "renderings": [
+      {
+        "language": "en",
+        "title": "How to register for the Ghana Card",
+        "summary": "Register for the Ghana Card at a National Identification Authority (NIA) office. Bring proof of Ghanaian citizenship such as a birth certificate or passport, or a relative who already holds a Ghana Card to vouch for you.",
+        "body": "The Ghana Card is the national identity card issued by the National Identification Authority (NIA). It is needed for many services including SIM registration, opening a bank account and NHIS enrolment.\n\nTo register:\n1. Go to an NIA registration centre or district office.\n2. Bring one of: a Ghanaian birth certificate, a valid Ghanaian passport, or a citizenship certificate. If you have none, a parent or relative who already has a Ghana Card may vouch for you at the centre.\n3. Your photograph, fingerprints and details are captured. You receive a slip and are told when and where to collect the card.\n\nFirst-time registration for Ghanaian citizens has been free at NIA offices; replacement cards and premium services attract fees. Fees and requirements can change, so confirm with your NIA district office.",
+        "keywords": ["ghana card", "national id", "NIA", "identity card", "register", "identification", "SIM"],
+        "origin": "editor",
+        "nativeReviewed": false
+      },
+      {
+        "language": "ak-asante",
+        "title": "Sɛnea wobɛkyerɛw wo din agye Ghana Card",
+        "summary": "Kɔ NIA ɔfese bi na kyerɛw wo din gye Ghana Card. Fa awo krataa anaa passport kɔ, anaa wo busuani a ɔwɔ Ghana Card dedaw nka ho asɛm ma wo.",
+        "body": "Ghana Card yɛ ɔman no nnipa nkyerɛkyerɛmu krataa a National Identification Authority (NIA) de ma. Wohia no ama SIM card, sikakorabea, ne NHIS.\n\n1. Kɔ NIA ɔfese a ɛbɛn wo.\n2. Fa awo krataa, Ghana passport, anaa ɔmanni krataa kɔ. Sɛ wunni biara a, wo busuani a ɔwɔ Ghana Card betumi adi wo adanse.\n3. Wɔbɛfa wo mfonini ne wo nsateaa. Wɔbɛkyerɛ wo bere a wobɛkɔ akogye card no.\n\nNsɛm yi betumi asesa; bisa NIA ɔfese a ɛbɛn wo.",
+        "keywords": ["Ghana Card", "NIA", "din kyerɛw", "krataa"],
+        "origin": "editor",
+        "nativeReviewed": false
+      }
+    ]
+  },
+  {
+    "id": "voter-registration",
+    "domain": "public-service",
+    "topic": "public-service/elections",
+    "updatedOn": "2026-09-01",
+    "reviewBy": "2027-03-01",
+    "status": "published",
+    "regions": [],
+    "sources": [
+      {
+        "title": "Voter registration eligibility and process",
+        "publisher": "Electoral Commission of Ghana",
+        "url": "https://ec.gov.gh",
+        "verifiedOn": "2026-09-01",
+        "rights": "Public information from a Government of Ghana body; summarised"
+      }
+    ],
+    "escalation": { "label": "Electoral Commission district office", "url": "https://ec.gov.gh" },
+    "renderings": [
+      {
+        "language": "en",
+        "title": "Registering to vote",
+        "summary": "Ghanaian citizens aged 18 or older can register to vote at an Electoral Commission registration centre during an announced registration period. Bring your Ghana Card or Ghanaian passport.",
+        "body": "You can register as a voter if you are a Ghanaian citizen, are 18 years or older, and are of sound mind.\n\nThe Electoral Commission (EC) announces registration periods before elections and opens centres in every district. Bring a Ghana Card or valid Ghanaian passport. The EC has also allowed registered voters to vouch for applicants without documents, subject to its rules at the time.\n\nAfter registering you receive a voter ID card. Check your name on the provisional voters' register when it is exhibited, and report any errors at your district EC office.",
+        "keywords": ["vote", "voter", "election", "register", "electoral commission", "EC", "voter ID"],
+        "origin": "editor",
+        "nativeReviewed": false
+      }
+    ]
+  },
+  {
+    "id": "nhis-registration",
+    "domain": "public-service",
+    "topic": "public-service/nhis",
+    "updatedOn": "2026-09-01",
+    "reviewBy": "2027-03-01",
+    "status": "published",
+    "regions": [],
+    "sources": [
+      {
+        "title": "How to register and renew NHIS membership",
+        "publisher": "National Health Insurance Authority (NHIA)",
+        "url": "https://www.nhis.gov.gh",
+        "verifiedOn": "2026-09-01",
+        "rights": "Public information from a Government of Ghana authority; summarised"
+      }
+    ],
+    "escalation": { "label": "NHIS district office", "url": "https://www.nhis.gov.gh" },
+    "renderings": [
+      {
+        "language": "en",
+        "title": "Joining or renewing the National Health Insurance Scheme (NHIS)",
+        "summary": "Register for NHIS at any NHIS district office with your Ghana Card, or renew by dialling *929# on your mobile phone. Children, people aged 70 and above, pregnant women and the very poor are exempt from the premium.",
+        "body": "The National Health Insurance Scheme (NHIS) covers most common illnesses at accredited facilities.\n\nNew registration: visit an NHIS district office with your Ghana Card. Your details and photo are captured and you pay a premium and processing fee unless you are exempt.\n\nRenewal: dial *929# from your mobile phone and follow the prompts, or use the NHIS mobile app, or visit an office.\n\nExempt groups (no premium): children under 18, persons aged 70 and above, pregnant women, SSNIT pensioners, and persons classified as indigent. Fees and rules change, so confirm at your district office.",
+        "keywords": ["NHIS", "health insurance", "register", "renew", "*929#", "premium", "exempt"],
+        "origin": "editor",
+        "nativeReviewed": false
+      },
+      {
+        "language": "ee",
+        "title": "NHIS me gegeɖeɖe alo eƒe yeyewɔwɔ",
+        "summary": "Yi NHIS ƒe nutome ɔfis kple wò Ghana Card nàŋlɔ ŋkɔ, alo ƒo *929# le wò kaƒomɔ dzi nàwɔe yeye. Ðeviwo, ame siwo xɔ ƒe 70 kple edzi, funɔwo kple ame dahewo mexea fe o.",
+        "body": "NHIS xea dɔléle geɖewo ƒe fe le kɔdzi siwo woɖe mɔ na.\n\nŊkɔŋɔŋlɔ yeye: yi NHIS ɔfis kple wò Ghana Card.\nYeyewɔwɔ: ƒo *929# le wò kaƒomɔ dzi.\n\nAme siwo mexea fe o: ɖevi siwo mexɔ ƒe 18 o, ame siwo xɔ ƒe 70 kple edzi, funɔwo, SSNIT pensiɔn xɔlawo kple ame dahewo. Sewo ate ŋu atrɔ; bia wò nutome ɔfis.",
+        "keywords": ["NHIS", "kɔdzi", "ŋkɔŋɔŋlɔ", "*929#"],
+        "origin": "editor",
+        "nativeReviewed": false
+      }
+    ]
+  },
+  {
+    "id": "birth-registration",
+    "domain": "public-service",
+    "topic": "public-service/birth-registration",
+    "updatedOn": "2026-09-01",
+    "reviewBy": "2027-03-01",
+    "status": "published",
+    "regions": [],
+    "sources": [
+      {
+        "title": "Registration of Births and Deaths Act, 2020 (Act 1027) and registry guidance",
+        "publisher": "Births and Deaths Registry, Ghana",
+        "url": "https://bdr.gov.gh",
+        "verifiedOn": "2026-09-01",
+        "rights": "Ghanaian legislation and public guidance; summarised"
+      }
+    ],
+    "escalation": { "label": "Births and Deaths Registry district office" },
+    "renderings": [
+      {
+        "language": "en",
+        "title": "Registering a child's birth",
+        "summary": "Register a birth at the Births and Deaths Registry office in your district, ideally within the first 12 months when registration is free. Bring the hospital weighing card or birth notification and a parent's ID.",
+        "body": "Every birth in Ghana should be registered with the Births and Deaths Registry. A birth certificate is needed for school enrolment, the Ghana Card and a passport.\n\nHow to register:\n1. Go to the Registry office in the district where the child was born.\n2. Bring the child health record (weighing card) or hospital birth notification, and the Ghana Card or other ID of a parent.\n3. Provide the child's names, date and place of birth, and parents' details.\n\nRegistration within the first 12 months is free. Late registration is still possible but attracts a fee and may require extra documents. Confirm current requirements at your district office.",
+        "keywords": ["birth certificate", "register birth", "baby", "registry", "weighing card"],
+        "origin": "editor",
+        "nativeReviewed": false
+      }
+    ]
+  },
+  {
+    "id": "passport-application",
+    "domain": "public-service",
+    "topic": "public-service/passport",
+    "updatedOn": "2026-09-01",
+    "reviewBy": "2027-03-01",
+    "status": "published",
+    "regions": [],
+    "sources": [
+      {
+        "title": "Ghana passport online application",
+        "publisher": "Ministry of Foreign Affairs and Regional Integration, Passport Office",
+        "url": "https://passport.mfa.gov.gh",
+        "verifiedOn": "2026-09-01",
+        "rights": "Public information from a Government of Ghana ministry; summarised"
+      }
+    ],
+    "escalation": { "label": "Passport Application Centre", "url": "https://passport.mfa.gov.gh" },
+    "renderings": [
+      {
+        "language": "en",
+        "title": "Applying for a Ghanaian passport",
+        "summary": "Apply for a passport online at the Passport Office website, pay the fee, then attend your chosen Passport Application Centre with your Ghana Card and supporting documents for biometric capture.",
+        "body": "Ghanaian passports are issued by the Passport Office of the Ministry of Foreign Affairs.\n\nSteps:\n1. Complete the application online at passport.mfa.gov.gh and pay the fee.\n2. Print the form and book an appointment at a Passport Application Centre.\n3. Attend with your Ghana Card, birth certificate and any other required documents. Your photo and fingerprints are taken.\n4. Collect the passport when notified; standard and expedited processing times differ.\n\nFees and document requirements change from time to time; check the official website before you apply.",
+        "keywords": ["passport", "travel document", "apply", "passport office", "biometric"],
+        "origin": "editor",
+        "nativeReviewed": false
+      }
+    ]
+  }
+]

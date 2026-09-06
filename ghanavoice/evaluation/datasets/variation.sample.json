@@ -1,0 +1,8 @@
+[
+  { "id": "v-0001", "concept": "maize", "asante": "aburo", "akuapem": "aburow", "provenance": { "asante": "Kumasi (editor draft)", "akuapem": "Akropong (editor draft)" }, "rights": "Editor draft pending native-speaker validation" },
+  { "id": "v-0002", "concept": "farm", "asante": "afuo", "akuapem": "afuw", "provenance": { "asante": "Kumasi (editor draft)", "akuapem": "Akropong (editor draft)" }, "rights": "Editor draft pending native-speaker validation" },
+  { "id": "v-0003", "concept": "water", "asante": "nsuo", "akuapem": "nsu", "provenance": { "asante": "Kumasi (editor draft)", "akuapem": "Akropong (editor draft)" }, "rights": "Editor draft pending native-speaker validation" },
+  { "id": "v-0004", "concept": "child", "asante": "abɔfra", "akuapem": "abofra", "provenance": { "asante": "Kumasi (editor draft)", "akuapem": "Akropong (editor draft)" }, "rights": "Editor draft pending native-speaker validation" },
+  { "id": "v-0005", "concept": "you can (2sg)", "asante": "wobɛtumi", "akuapem": "wubetumi", "provenance": { "asante": "Kumasi (editor draft)", "akuapem": "Akropong (editor draft)" }, "rights": "Editor draft pending native-speaker validation" },
+  { "id": "v-0006", "concept": "who?", "asante": "hwan", "akuapem": "hena", "provenance": { "asante": "Kumasi (editor draft)", "akuapem": "Akropong (editor draft)" }, "rights": "Editor draft pending native-speaker validation" }
+]

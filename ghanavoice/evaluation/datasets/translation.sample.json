@@ -1,0 +1,51 @@
+[
+  {
+    "id": "mt-0001",
+    "sourceLanguage": "en",
+    "targetLanguage": "ak-asante",
+    "source": "Call 112 for any emergency in Ghana.",
+    "references": ["Frɛ 112 sɛ ɔhaw kɛse bi asi wɔ Ghana."],
+    "domain": "public-service",
+    "mustUseTerms": ["emergency"],
+    "rights": "Source: GhanaVoice editors (CC BY 4.0). Reference: engineering-team draft, NOT yet native-speaker validated; replace per docs/07."
+  },
+  {
+    "id": "mt-0002",
+    "sourceLanguage": "en",
+    "targetLanguage": "ak-akuapem",
+    "source": "Call 112 for any emergency in Ghana.",
+    "references": ["Frɛ 112 sɛ ɔhaw kɛse bi asi wɔ Ghana."],
+    "domain": "public-service",
+    "mustUseTerms": ["emergency"],
+    "rights": "Draft reference; not native-speaker validated."
+  },
+  {
+    "id": "mt-0003",
+    "sourceLanguage": "en",
+    "targetLanguage": "ee",
+    "source": "Sleep under an insecticide-treated net every night.",
+    "references": ["Mlɔ atike-si-le-eŋu-ƒe-agbadɔ te zã sia zã."],
+    "domain": "health",
+    "rights": "Draft reference; not native-speaker validated."
+  },
+  {
+    "id": "mt-0004",
+    "sourceLanguage": "en",
+    "targetLanguage": "gaa",
+    "source": "Basic education in Ghana is free and compulsory.",
+    "references": ["Ghana skul shishijee ji nɔ ni akɛ shika ewoo ni esa akɛ gbekɛ fɛɛ aya."],
+    "domain": "education",
+    "mustUseTerms": ["school"],
+    "rights": "Draft reference; not native-speaker validated."
+  },
+  {
+    "id": "mt-0005",
+    "sourceLanguage": "en",
+    "targetLanguage": "ak-asante",
+    "source": "Ask your agricultural extension agent which approved treatment to use.",
+    "references": ["Bisa wo kuayɛ ɔkyerɛkyerɛfo aduru a wɔapene so a wode bedi dwuma."],
+    "domain": "agriculture",
+    "mustUseTerms": ["extension-agent"],
+    "rights": "Draft reference; not native-speaker validated."
+  }
+]
