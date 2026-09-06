@@ -2,7 +2,7 @@
 
 import logging
 from contextlib import asynccontextmanager
-from datetime import date, datetime
+from datetime import date, datetime, timezone
 from pathlib import Path
 from typing import Annotated
 
@@ -130,6 +130,7 @@ def create_app(settings: Settings | None = None) -> FastAPI:
         bay: int = Field(ge=1)
         occupancy: int = Field(ge=0, le=4, description="0 empty .. 4 full")
         plate: str = ""
+        reported_at: datetime | None = Field(default=None, description="Original time for reports queued offline by the terminal app (UTC)")
 
     class UpdateIn(BaseModel):
         msisdn: str
@@ -172,8 +173,12 @@ def create_app(settings: Settings | None = None) -> FastAPI:
         master = svc.station_master(body.msisdn)
         if master is None or master.terminal_id != terminal_id:
             raise HTTPException(403, "phone number is not a registered station master for this terminal")
+        now = None
+        if body.reported_at is not None:
+            now = body.reported_at.replace(tzinfo=None) if body.reported_at.tzinfo is None else body.reported_at.astimezone(timezone.utc).replace(tzinfo=None)
+            now = min(now, datetime.utcnow())  # never accept a report from the future
         try:
-            rep = svc.report(terminal_id, body.destination_id, body.bay, body.occupancy, master.msisdn, body.plate)
+            rep = svc.report(terminal_id, body.destination_id, body.bay, body.occupancy, master.msisdn, body.plate, now=now)
         except ValueError as exc:
             raise HTTPException(422, str(exc)) from exc
         return {"report_id": rep.id, "status": rep.status, "reported_at": rep.reported_at.isoformat() + "Z"}
@@ -190,6 +195,16 @@ def create_app(settings: Settings | None = None) -> FastAPI:
         if rep.terminal_id != master.terminal_id:
             raise HTTPException(403, "report belongs to another terminal")
         return {"report_id": rep.id, "status": rep.status, "occupancy": rep.occupancy}
+
+    @app.get("/api/station-masters/{msisdn}")
+    def station_master_lookup(msisdn: str, svc: Annotated[LoadingService, Depends(loading_service)]):
+        """Used by the terminal app at login. Pilot trust model: a registered number is enough;
+        production should add an OTP step through the USSD aggregator's SMS API."""
+        master = svc.station_master(msisdn)
+        if master is None:
+            raise HTTPException(404, "phone number is not a registered station master")
+        terminal = svc.terminal(master.terminal_id)
+        return {"msisdn": master.msisdn, "name": master.name, "terminal_id": master.terminal_id, "terminal_name": terminal.name, "bays": terminal.bays}
 
     @app.post("/api/station-masters", status_code=201)
     def register_master(body: StationMasterIn, svc: Annotated[LoadingService, Depends(loading_service)], x_admin_key: Annotated[str | None, Header()] = None):

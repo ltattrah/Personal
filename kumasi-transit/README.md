@@ -12,6 +12,7 @@ it and KsTU students can maintain it.
 | **Phase 2** intercity tracking | MQTT → Python asyncio ingest → SQL store (SQLite or PostGIS/TimescaleDB) → map-matching and ETA → **GTFS-Realtime** feed for OpenTripPlanner; free owner dashboards for STC, VIP and Metro Mass; fleet simulator standing in for trackers | `kumasi_transit/tracking/`, `/gtfs-rt/*`, `/dashboard/operator/*` |
 | Cadence study (budget line 12) | Analytic model of reporting interval vs. SIM data cost vs. position error, cross-checked by Monte Carlo, plus an **OMNeT++ 6** model of trackers over a lossy cellular link | `kumasi_transit/cadence/`, `omnet/` |
 | City view | KMA dashboard: active loading reports, live vehicles, feed validity, fare version | `/` |
+| **Mobile apps** | Flutter passenger app (offline-first "find a car" + fares) and station-master terminal app (three-tap reports, offline queue, live board), two flavors of one codebase | `mobile/` |
 
 ## Quick start (laptop, no Docker)
 
@@ -19,7 +20,7 @@ it and KsTU students can maintain it.
 cd kumasi-transit
 python -m venv .venv && source .venv/bin/activate
 pip install -e ".[dev]"
-pytest                          # 39 tests
+pytest                          # 40 tests
 scripts/demo.sh                 # seeds SQLite, builds GTFS, simulates the fleet, serves on :8000
 ```
 
@@ -122,6 +123,7 @@ Fleet of 70 for 14 months: USD 1,158  (proposal line 8 budget: USD 6,000)
 
 ```
 kumasi-transit/
+  mobile/        Flutter passenger + terminal apps (see mobile/README.md)
   kumasi_transit/
     gtfs/        feed.py (zip I/O), builder.py, validator.py, fares.py
     loading/     service.py (board logic), ussd.py (menu engine)
@@ -135,10 +137,16 @@ kumasi-transit/
   deploy/        mosquitto.conf, init-timescale.sql;  docker-compose.yml;  Dockerfile
 ```
 
+## Mobile apps
+
+`mobile/` holds the Flutter project with two entry points and Android flavors:
+`flutter run --flavor passenger -t lib/main_passenger.dart` and
+`flutter run --flavor terminal -t lib/main_terminal.dart`. Both use only the JSON API; the
+terminal app queues reports offline with their original time (`reported_at`), which the API
+honours so late reports expire correctly. See `mobile/README.md`.
+
 ## What is deliberately not here
 
-- The Flutter passenger app and the Android terminal app: both are thin clients of
-  `/api/terminals/*` and `/api/terminals/{id}/reports`; the `/passenger` page shows the same flow.
 - Phase 3 (trotro tracking at scale, crowdsourcing, driver incentives) is a follow-on in the proposal.
 - The OMNeT++ model was written against the OMNeT++ 6 API but has not been compiled in this
   environment; run `omnet/build.sh` with a local OMNeT++ install.

@@ -97,3 +97,21 @@ def test_dashboards_render(client):
         assert r.status_code == 200, path
     assert client.get("/dashboard/terminal/NOWHERE").status_code == 404
     assert "Where are you?" in client.get("/ussd/simulate", params={"text": "1"}).text
+
+
+def test_terminal_app_login_and_offline_report(client):
+    assert client.get("/api/station-masters/0200000000").status_code == 404
+    me = client.get("/api/station-masters/0240000004").json()
+    assert me["terminal_id"] == "SUAME" and me["bays"] == 16
+    # A report queued offline 30 minutes ago arrives with its original time and is already stale.
+    from datetime import datetime, timedelta
+
+    old = (datetime.utcnow() - timedelta(minutes=30)).isoformat() + "Z"
+    r = client.post("/api/terminals/SUAME/reports", json={"msisdn": "0240000004", "destination_id": "KEJETIA", "bay": 1, "occupancy": 2, "reported_at": old})
+    assert r.status_code == 201 and r.json()["reported_at"].startswith(old[:16])
+    assert client.get("/api/terminals/SUAME/board").json()["loading"] == []
+    # Future timestamps are clamped to now.
+    future = (datetime.utcnow() + timedelta(hours=1)).isoformat() + "Z"
+    r = client.post("/api/terminals/SUAME/reports", json={"msisdn": "0240000004", "destination_id": "KEJETIA", "bay": 2, "occupancy": 2, "reported_at": future})
+    assert r.status_code == 201
+    assert client.get("/api/terminals/SUAME/board").json()["loading"][0]["age_seconds"] <= 5
