@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block title %}Find a car - Kumasi Transit{% endblock %}
+{% block content %}
+<h1>Find a car</h1>
+<p class="muted">Same information as the USSD service, for smartphones. No login, no location access.</p>
+<div class="card">
+  <label>I am at<br>
+    <select id="terminal">{% for t in terminals %}<option value="{{ t.id }}">{{ t.name }}</option>{% endfor %}</select>
+  </label>
+  &nbsp; <label>going to<br><select id="dest"></select></label>
+  &nbsp; <button id="go">Search</button>
+</div>
+<div id="result" style="margin-top:1rem"></div>
+{% endblock %}
+{% block scripts %}
+<script>
+  const dests = {{ dest|tojson }};
+  const tSel = document.getElementById('terminal'), dSel = document.getElementById('dest'), out = document.getElementById('result');
+  function fillDest() { dSel.innerHTML = dests[tSel.value].map(d => `<option value="${d[0]}">${d[1]}</option>`).join(''); }
+  tSel.onchange = fillDest; fillDest();
+  document.getElementById('go').onclick = async () => {
+    const r = await fetch(`/api/terminals/${tSel.value}/find?destination=${dSel.value}`); const d = await r.json();
+    let html = `<div class="card"><h2 style="margin-top:0">${tSel.options[tSel.selectedIndex].text} → ${d.destination}</h2>`;
+    if (!d.loading.length) html += `<p>No car reported loading in the last 20 minutes. Check with the station master.</p>`;
+    else html += '<table><tr><th>Bay</th><th>Plate</th><th>How full</th><th>Reported</th></tr>' + d.loading.map(c => `<tr><td>${c.bay}</td><td>${c.plate || '-'}</td><td class="${c.status.startsWith('full') ? 'full' : ''}">${c.status.startsWith('full') ? c.status : c.occupancy_label}</td><td class="muted">${Math.floor(c.age_seconds/60)} min ago</td></tr>`).join('') + '</table>';
+    if (d.fare) html += `<p><strong>Fare GHS ${d.fare.price.toFixed(2)}</strong> <span class="muted">(GPRTU list ${d.fare.version})</span></p>`;
+    out.innerHTML = html + '</div>';
+  };
+</script>
+{% endblock %}

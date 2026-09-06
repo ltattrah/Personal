@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block title %}{{ terminal.name }} loading board - Kumasi Transit{% endblock %}
+{% block head %}<meta http-equiv="refresh" content="30">{% endblock %}
+{% block content %}
+<h1>{{ terminal.name }} <span class="muted">loading board</span></h1>
+<p class="muted">Reported by station masters over USSD / the terminal app. Refreshes every 30 s. Destinations served: {% for d, n in destinations %}{{ n }}{{ ', ' if not loop.last }}{% endfor %}.</p>
+{% if board %}
+<table>
+  <tr><th>Destination</th><th>Bay</th><th>Plate</th><th>How full</th><th>Status</th><th>Reported</th></tr>
+  {% for e in board %}
+  <tr>
+    <td><strong>{{ e.destination_name }}</strong></td>
+    <td>{{ e.bay }}</td>
+    <td>{{ e.plate or '-' }}</td>
+    <td><span class="bar {{ 'full' if e.occupancy == 4 }}"><i style="width:{{ e.occupancy * 25 }}%"></i></span> {{ e.occupancy_label }}</td>
+    <td class="{{ 'full' if e.status == 'full' }}">{{ e.status_label }}</td>
+    <td class="muted">{{ e.age_seconds // 60 }} min ago</td>
+  </tr>
+  {% endfor %}
+</table>
+{% else %}
+<div class="card">Nothing reported loading in the last 20 minutes.</div>
+{% endif %}
+<h2>Station-master shortcuts</h2>
+<p class="muted">Dial the shortcode, then: <code>1</code> report loading → destination → bay → how full. <code>2</code> update or mark departed. Or use the Android terminal app which posts to <code>POST /api/terminals/{{ terminal.id }}/reports</code>.</p>
+{% endblock %}

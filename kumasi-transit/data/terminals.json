@@ -1,0 +1,15 @@
+{
+  "_comment": "Phase 1 terminals. Destinations are the loading-status choices offered to station masters and passengers; ids refer to stops in data/gtfs_seed/corridors.json. Bay counts for Kejetia are indicative of the bay-numbered lorry terminal.",
+  "terminals": [
+    {"id": "KEJETIA", "name": "Kejetia", "bays": 60, "destinations": ["TECHJCN", "SUAME", "TAFO", "ABUAKWA", "SOFOLINE", "SANTASI"]},
+    {"id": "ASAFO", "name": "Asafo", "bays": 24, "destinations": ["SANTASI", "KWADASO", "TECHJCN", "ACCRA", "TAMALE", "TAKORADI", "MAMPONG", "OBUASI"]},
+    {"id": "TECHJCN", "name": "Tech Junction", "bays": 12, "destinations": ["KEJETIA", "ASAFO", "ADUM"]},
+    {"id": "SUAME", "name": "Suame", "bays": 16, "destinations": ["KEJETIA", "TAFO", "KROFROM"]}
+  ],
+  "station_masters": [
+    {"msisdn": "233240000001", "name": "Kejetia station master (demo)", "terminal_id": "KEJETIA"},
+    {"msisdn": "233240000002", "name": "Asafo station master (demo)", "terminal_id": "ASAFO"},
+    {"msisdn": "233240000003", "name": "Tech Junction station master (demo)", "terminal_id": "TECHJCN"},
+    {"msisdn": "233240000004", "name": "Suame station master (demo)", "terminal_id": "SUAME"}
+  ]
+}

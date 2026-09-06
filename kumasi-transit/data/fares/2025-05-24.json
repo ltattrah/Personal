@@ -1,0 +1,21 @@
+{
+  "version": "2025-05-24",
+  "effective_from": "2025-05-24",
+  "currency": "GHS",
+  "source": "GPRTU / transport operators announce roughly 15% nationwide fare reduction, May 2025 (placeholder values; verify against the printed GPRTU fare list before publication).",
+  "change_pct": -15.0,
+  "fares": {
+    "C1-KJT-TECH": 4.00,
+    "C2-KJT-TAFO": 4.00,
+    "C3A-ASF-SAN": 3.50,
+    "C3B-ASF-KWD": 3.50,
+    "C3T-ASF-SAN": 6.00,
+    "C4-KJT-ABK": 5.00,
+    "IC-STC-ACC": 110.00,
+    "IC-VIP-ACC": 120.00,
+    "IC-STC-TML": 150.00,
+    "IC-STC-TDI": 120.00,
+    "MMT-KSI-MPG": 20.00,
+    "MMT-KSI-OBS": 18.00
+  }
+}

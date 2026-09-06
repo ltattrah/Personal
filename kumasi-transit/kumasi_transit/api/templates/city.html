@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+{% block title %}City dashboard - Kumasi Transit{% endblock %}
+{% block content %}
+<h1>City dashboard <span class="muted">(KMA Department of Transport view)</span></h1>
+<div class="grid">
+  <div class="card"><div class="stat">{{ loading.active_reports }}<small>cars loading now, all terminals</small></div></div>
+  <div class="card"><div class="stat">{{ loading.reports_last_24h }}<small>station-master reports, last 24 h</small></div></div>
+  <div class="card"><div class="stat">{{ tracking.vehicles_live }} / {{ tracking.vehicles_registered }}<small>intercity vehicles live / registered</small></div></div>
+  <div class="card"><div class="stat">{{ tracking.fixes_last_24h }}<small>GPS fixes, last 24 h</small></div></div>
+</div>
+
+<h2>Terminals (Phase 1)</h2>
+<table>
+  <tr><th>Terminal</th><th>Bays</th><th>Loading now</th><th>Board</th></tr>
+  {% for t in terminals %}
+  <tr><td>{{ t.name }}</td><td>{{ t.bays }}</td><td>{{ loading.by_terminal.get(t.id, 0) }}</td><td><a href="/dashboard/terminal/{{ t.id }}">open</a></td></tr>
+  {% endfor %}
+</table>
+
+<h2>Open data (Phase 0)</h2>
+<div class="grid">
+  <div class="card">
+    <strong>GTFS</strong> <span class="pill {{ 'ok' if validation.ok else 'warn' }}">{{ 'valid' if validation.ok else 'errors' }}</span><br>
+    {{ validation.stats.routes }} routes, {{ validation.stats.stops }} stops, {{ validation.stats.trips }} trips, {{ validation.stats.frequency_periods }} headway periods.<br>
+    <a href="/gtfs/kumasi-gtfs.zip">Download kumasi-gtfs.zip</a> · <a href="/gtfs/validation">validation report</a>
+    {% if validation.warnings %}<ul class="muted">{% for w in validation.warnings %}<li>{{ w }}</li>{% endfor %}</ul>{% endif %}
+  </div>
+  <div class="card">
+    <strong>Fares</strong> <span class="pill">version {{ fares.version }}</span><br>
+    In force since {{ fares.effective_from.strftime('%d %b %Y') }}{% if fares.change_pct %} ({{ '%+.0f' % fares.change_pct }} % vs previous){% endif %}.<br>
+    <span class="muted">{{ fares.source }}</span><br>
+    <a href="/api/fares">fare table (JSON)</a>
+  </div>
+  <div class="card">
+    <strong>GTFS-Realtime (Phase 2)</strong><br>
+    <a href="/gtfs-rt/feed.pb">feed.pb</a> (vehicle positions + trip updates) · <a href="/gtfs-rt/vehicle-positions.pb">vehicle-positions.pb</a> · <a href="/gtfs-rt/feed.json">JSON view</a><br>
+    <span class="muted">Point OpenTripPlanner's updater at <code>/gtfs-rt/feed.pb</code>.</span>
+  </div>
+</div>
+
+<h2>Routes</h2>
+<table>
+  <tr><th>Route</th><th>Mode</th><th>Corridor</th><th>Stops</th><th>Fare (GHS)</th></tr>
+  {% for r in routes %}
+  <tr><td><strong>{{ r.short_name }}</strong><br><span class="muted">{{ r.long_name }}</span></td><td>{{ r.mode.replace('_',' ') }}</td><td>{{ r.corridor or '-' }}</td><td>{{ r.stops|length }}</td><td>{{ '%.2f' % fares.fares[r.id] if r.id in fares.fares else '-' }}</td></tr>
+  {% endfor %}
+</table>
+{% endblock %}

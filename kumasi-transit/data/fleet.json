@@ -1,0 +1,20 @@
+{
+  "_comment": "Demo intercity fleet for Phase 2. Vehicle ids are the tracker/IMEI aliases the operators register; plates are placeholders.",
+  "operators": [
+    {"id": "STC", "name": "Intercity STC Coaches (Kumasi station)"},
+    {"id": "VIP", "name": "VIP Jeoun Transport (Asafo yard)"},
+    {"id": "MMT", "name": "Metro Mass Transit (Kumasi depot)"}
+  ],
+  "vehicles": [
+    {"id": "STC-001", "operator_id": "STC", "plate": "GN 1201-22", "route_id": "IC-STC-ACC", "tracker_id": "TRK-A1001"},
+    {"id": "STC-002", "operator_id": "STC", "plate": "GN 1202-22", "route_id": "IC-STC-ACC", "tracker_id": "TRK-A1002"},
+    {"id": "STC-003", "operator_id": "STC", "plate": "GN 1203-22", "route_id": "IC-STC-TML", "tracker_id": "TRK-A1003"},
+    {"id": "STC-004", "operator_id": "STC", "plate": "GN 1204-22", "route_id": "IC-STC-TDI", "tracker_id": "TRK-A1004"},
+    {"id": "VIP-101", "operator_id": "VIP", "plate": "AS 5501-21", "route_id": "IC-VIP-ACC", "tracker_id": "TRK-B2001"},
+    {"id": "VIP-102", "operator_id": "VIP", "plate": "AS 5502-21", "route_id": "IC-VIP-ACC", "tracker_id": "TRK-B2002"},
+    {"id": "VIP-103", "operator_id": "VIP", "plate": "AS 5503-21", "route_id": "IC-VIP-ACC", "tracker_id": "TRK-B2003"},
+    {"id": "MMT-301", "operator_id": "MMT", "plate": "GR 3301-19", "route_id": "MMT-KSI-MPG", "tracker_id": "TRK-C3001"},
+    {"id": "MMT-302", "operator_id": "MMT", "plate": "GR 3302-19", "route_id": "MMT-KSI-MPG", "tracker_id": "TRK-C3002"},
+    {"id": "MMT-303", "operator_id": "MMT", "plate": "GR 3303-19", "route_id": "MMT-KSI-OBS", "tracker_id": "TRK-C3003"}
+  ]
+}

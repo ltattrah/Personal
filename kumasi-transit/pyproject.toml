@@ -1,0 +1,41 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "kumasi-transit"
+version = "0.1.0"
+description = "Real-time transit information for Kumasi: open GTFS, terminal loading-status over USSD, and an intercity GPS tracking pipeline publishing GTFS-Realtime."
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+authors = [{ name = "Kumasi Technical University transit pilot team" }]
+dependencies = [
+    "fastapi>=0.110",
+    "uvicorn[standard]>=0.29",
+    "sqlalchemy>=2.0",
+    "pydantic>=2",
+    "pydantic-settings>=2",
+    "jinja2>=3.1",
+    "python-multipart>=0.0.9",
+    "gtfs-realtime-bindings>=1.0",
+    "protobuf>=4",
+    "paho-mqtt>=2",
+]
+
+[project.optional-dependencies]
+postgres = ["psycopg[binary]>=3.1"]
+dev = ["pytest>=8", "httpx>=0.27"]
+
+[project.scripts]
+kumasi-transit = "kumasi_transit.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["kumasi_transit*"]
+
+[tool.setuptools.package-data]
+"kumasi_transit.api" = ["templates/*.html", "static/*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"

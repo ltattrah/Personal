@@ -1,0 +1,22 @@
+{
+  "version": "2026-06-02",
+  "effective_from": "2026-06-02",
+  "currency": "GHS",
+  "source": "GPRTU 20% nationwide fare increase effective 2 June 2026 (placeholder values derived from the previous version; verify against the printed GPRTU fare list before publication).",
+  "change_pct": 20.0,
+  "derived_from": "2025-05-24",
+  "fares": {
+    "C1-KJT-TECH": 4.80,
+    "C2-KJT-TAFO": 4.80,
+    "C3A-ASF-SAN": 4.20,
+    "C3B-ASF-KWD": 4.20,
+    "C3T-ASF-SAN": 7.20,
+    "C4-KJT-ABK": 6.00,
+    "IC-STC-ACC": 132.00,
+    "IC-VIP-ACC": 144.00,
+    "IC-STC-TML": 180.00,
+    "IC-STC-TDI": 144.00,
+    "MMT-KSI-MPG": 24.00,
+    "MMT-KSI-OBS": 21.60
+  }
+}

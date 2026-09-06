@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% block title %}{{ operator_id }} fleet - Kumasi Transit{% endblock %}
+{% block head %}
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+{% endblock %}
+{% block content %}
+<h1>{{ operator_id }} <span class="muted">free telematics dashboard</span></h1>
+<p class="muted">Live positions from the pilot trackers, map-matched to the route with arrival estimates. Updates every 30 s. Other operators: <a href="/dashboard/operator/STC">STC</a> · <a href="/dashboard/operator/VIP">VIP</a> · <a href="/dashboard/operator/MMT">MMT</a></p>
+<div id="map"></div>
+<h2>Vehicles ({{ vehicles|length }} live)</h2>
+<table id="fleet">
+  <tr><th>Vehicle</th><th>Route</th><th>Speed</th><th>Next stop</th><th>Then</th><th>Last fix</th></tr>
+  {% for v in vehicles %}
+  <tr>
+    <td><strong>{{ v.plate or v.vehicle_id }}</strong><br><span class="muted">{{ v.vehicle_id }}</span></td>
+    <td>{{ v.route_id }} <span class="muted">dir {{ v.direction }}</span>{% if v.on_route is sameas false %}<br><span class="warn">off route ({{ v.offset_m }} m)</span>{% endif %}</td>
+    <td>{{ v.speed_kph if v.speed_kph is not none else '-' }} km/h</td>
+    <td>{% if v.next_stops %}{{ v.next_stops[0].stop }} <span class="muted">in {{ v.next_stops[0].seconds // 60 }} min</span>{% else %}-{% endif %}</td>
+    <td>{% if v.next_stops|length > 1 %}{{ v.next_stops[1].stop }} <span class="muted">in {{ v.next_stops[1].seconds // 60 }} min</span>{% else %}-{% endif %}</td>
+    <td class="muted">{{ v.timestamp.replace('T', ' ')[:19] }} UTC</td>
+  </tr>
+  {% endfor %}
+</table>
+{% endblock %}
+{% block scripts %}
+<script>
+  const vehicles = {{ vehicles|tojson }};
+  const map = L.map('map').setView([6.69, -1.62], 7);
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {maxZoom: 18, attribution: '&copy; OpenStreetMap contributors'}).addTo(map);
+  const seenRoutes = new Set();
+  const markers = [];
+  vehicles.forEach(v => {
+    const m = L.circleMarker([v.lat, v.lon], {radius: 7, color: '#0b6e4f', fillColor: '#0b6e4f', fillOpacity: .9}).addTo(map);
+    const next = v.next_stops.length ? `<br>Next: ${v.next_stops[0].stop} in ${Math.round(v.next_stops[0].seconds/60)} min` : '';
+    m.bindPopup(`<b>${v.plate || v.vehicle_id}</b><br>${v.route_id} · ${v.speed_kph ?? '-'} km/h${next}`);
+    markers.push(m);
+    if (v.route_id && !seenRoutes.has(v.route_id)) {
+      seenRoutes.add(v.route_id);
+      fetch(`/api/routes/${v.route_id}/shape`).then(r => r.json()).then(d => L.polyline(d.points, {color: '#5f6b7a', weight: 2, dashArray: '4 6'}).addTo(map));
+    }
+  });
+  if (markers.length) map.fitBounds(L.featureGroup(markers).getBounds().pad(0.3));
+  setTimeout(() => location.reload(), 30000);
+</script>
+{% endblock %}

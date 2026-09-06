@@ -1,0 +1,135 @@
+{
+  "_comment": "Seed network for Phase 0. Coordinates are approximate desk estimates and MUST be field-verified on the four pilot corridors before publication. Headways are placeholders for 'fill and go' operation, to be replaced by observed values.",
+  "feed_info": {
+    "publisher_name": "Kumasi Technical University transit pilot",
+    "publisher_url": "https://kstu.edu.gh",
+    "lang": "en",
+    "version": "seed-2026-09"
+  },
+  "agencies": [
+    {"id": "GPRTU-ASH", "name": "GPRTU Ashanti Regional (trotro and shared-taxi branches)", "url": "https://gprtu.org", "timezone": "Africa/Accra"},
+    {"id": "STC", "name": "Intercity STC Coaches", "url": "https://stc.gov.gh", "timezone": "Africa/Accra"},
+    {"id": "VIP", "name": "VIP Jeoun Transport", "url": "https://vipjeoun.com", "timezone": "Africa/Accra"},
+    {"id": "MMT", "name": "Metro Mass Transit (Kumasi depot)", "url": "https://metromass.com", "timezone": "Africa/Accra"}
+  ],
+  "stops": {
+    "KEJETIA":   {"name": "Kejetia Terminal",            "lat": 6.7003, "lon": -1.6223, "terminal": true},
+    "ADUM":      {"name": "Adum (Prempeh II Street)",    "lat": 6.6935, "lon": -1.6215},
+    "ASAFO":     {"name": "Asafo Interchange Terminal",  "lat": 6.6872, "lon": -1.6132, "terminal": true},
+    "AMAKOM":    {"name": "Amakom (KsTU campus)",        "lat": 6.6848, "lon": -1.6068},
+    "ANLOGA":    {"name": "Anloga Junction",             "lat": 6.6898, "lon": -1.5985},
+    "AYIGYA":    {"name": "Ayigya",                      "lat": 6.6862, "lon": -1.5850},
+    "TECHJCN":   {"name": "Tech Junction (KNUST)",       "lat": 6.6842, "lon": -1.5762, "terminal": true},
+    "ALABAR":    {"name": "Alabar",                      "lat": 6.7078, "lon": -1.6230},
+    "KROFROM":   {"name": "Krofrom",                     "lat": 6.7118, "lon": -1.6205},
+    "SUAMERBT":  {"name": "Suame Roundabout",            "lat": 6.7176, "lon": -1.6262},
+    "SUAME":     {"name": "Suame Magazine Terminal",     "lat": 6.7228, "lon": -1.6248, "terminal": true},
+    "TAFO":      {"name": "Old Tafo",                    "lat": 6.7335, "lon": -1.6118},
+    "BEKWAIRBT": {"name": "Bekwai Roundabout",           "lat": 6.6828, "lon": -1.6268},
+    "AHODWO":    {"name": "Ahodwo Roundabout",           "lat": 6.6712, "lon": -1.6338},
+    "SANTASI":   {"name": "Santasi Roundabout",          "lat": 6.6659, "lon": -1.6483},
+    "KWADASO":   {"name": "Kwadaso",                     "lat": 6.6819, "lon": -1.6595},
+    "SOFOLINE":  {"name": "Sofoline Interchange",        "lat": 6.6962, "lon": -1.6442},
+    "TANOSO":    {"name": "Tanoso",                      "lat": 6.7018, "lon": -1.6852},
+    "ABUAKWA":   {"name": "Abuakwa",                     "lat": 6.7047, "lon": -1.7083},
+    "KONONGO":   {"name": "Konongo",                     "lat": 6.6167, "lon": -1.2167},
+    "NKAWKAW":   {"name": "Nkawkaw",                     "lat": 6.5500, "lon": -0.7667},
+    "NSAWAM":    {"name": "Nsawam",                      "lat": 5.8087, "lon": -0.3505},
+    "ACCRA":     {"name": "Accra (Kwame Nkrumah Circle)","lat": 5.5716, "lon": -0.2130},
+    "TECHIMAN":  {"name": "Techiman",                    "lat": 7.5833, "lon": -1.9333},
+    "KINTAMPO":  {"name": "Kintampo",                    "lat": 8.0500, "lon": -1.7333},
+    "TAMALE":    {"name": "Tamale",                      "lat": 9.4008, "lon": -0.8393},
+    "OBUASI":    {"name": "Obuasi",                      "lat": 6.2000, "lon": -1.6667},
+    "DUNKWA":    {"name": "Dunkwa-on-Offin",             "lat": 5.9667, "lon": -1.7833},
+    "TARKWA":    {"name": "Tarkwa",                      "lat": 5.3000, "lon": -1.9833},
+    "TAKORADI":  {"name": "Takoradi",                    "lat": 4.8970, "lon": -1.7600},
+    "EJISU":     {"name": "Ejisu",                       "lat": 6.7167, "lon": -1.3667},
+    "MAMPONG":   {"name": "Mampong (Ashanti)",           "lat": 7.0667, "lon": -1.4000}
+  },
+  "routes": [
+    {
+      "id": "C1-KJT-TECH", "agency": "GPRTU-ASH", "mode": "trotro",
+      "short_name": "Kejetia-Tech", "long_name": "Kejetia / Adum - Tech Junction (KNUST) via Ayigya",
+      "corridor": 1, "color": "1F77B4", "speed_kph": 16,
+      "stops": ["KEJETIA", "ADUM", "ASAFO", "AMAKOM", "ANLOGA", "AYIGYA", "TECHJCN"],
+      "headways": [["05:30", "09:00", 240], ["09:00", "15:30", 480], ["15:30", "20:00", 240], ["20:00", "22:00", 900]]
+    },
+    {
+      "id": "C2-KJT-TAFO", "agency": "GPRTU-ASH", "mode": "trotro",
+      "short_name": "Kejetia-Tafo", "long_name": "Kejetia - Suame Magazine - Old Tafo",
+      "corridor": 2, "color": "FF7F0E", "speed_kph": 15,
+      "stops": ["KEJETIA", "ALABAR", "KROFROM", "SUAMERBT", "SUAME", "TAFO"],
+      "headways": [["05:30", "09:00", 300], ["09:00", "15:30", 600], ["15:30", "20:00", 300], ["20:00", "21:30", 900]]
+    },
+    {
+      "id": "C3A-ASF-SAN", "agency": "GPRTU-ASH", "mode": "trotro",
+      "short_name": "Asafo-Santasi", "long_name": "Asafo Interchange - Santasi",
+      "corridor": 3, "color": "2CA02C", "speed_kph": 17,
+      "stops": ["ASAFO", "ADUM", "BEKWAIRBT", "AHODWO", "SANTASI"],
+      "headways": [["05:30", "09:00", 300], ["09:00", "15:30", 600], ["15:30", "20:00", 300], ["20:00", "21:30", 1200]]
+    },
+    {
+      "id": "C3B-ASF-KWD", "agency": "GPRTU-ASH", "mode": "trotro",
+      "short_name": "Asafo-Kwadaso", "long_name": "Asafo Interchange - Kwadaso",
+      "corridor": 3, "color": "9467BD", "speed_kph": 17,
+      "stops": ["ASAFO", "ADUM", "BEKWAIRBT", "SOFOLINE", "KWADASO"],
+      "headways": [["05:30", "09:00", 360], ["09:00", "15:30", 720], ["15:30", "20:00", 360], ["20:00", "21:30", 1200]]
+    },
+    {
+      "id": "C3T-ASF-SAN", "agency": "GPRTU-ASH", "mode": "shared_taxi",
+      "short_name": "Asafo-Santasi taxi", "long_name": "Asafo Interchange - Santasi (shared taxi)",
+      "corridor": 3, "color": "F0C419", "speed_kph": 20,
+      "stops": ["ASAFO", "BEKWAIRBT", "AHODWO", "SANTASI"],
+      "headways": [["05:30", "22:00", 180]]
+    },
+    {
+      "id": "C4-KJT-ABK", "agency": "GPRTU-ASH", "mode": "trotro",
+      "short_name": "Kejetia-Abuakwa", "long_name": "Kejetia - Sofoline - Abuakwa",
+      "corridor": 4, "color": "D62728", "speed_kph": 18,
+      "stops": ["KEJETIA", "SOFOLINE", "TANOSO", "ABUAKWA"],
+      "headways": [["05:00", "09:00", 240], ["09:00", "15:30", 480], ["15:30", "20:00", 240], ["20:00", "22:00", 900]]
+    },
+    {
+      "id": "IC-STC-ACC", "agency": "STC", "mode": "coach",
+      "short_name": "STC Accra", "long_name": "Kumasi (Asafo) - Accra via Konongo and Nkawkaw",
+      "color": "003F87", "speed_kph": 60,
+      "stops": ["ASAFO", "KONONGO", "NKAWKAW", "NSAWAM", "ACCRA"],
+      "departures": ["04:00", "06:00", "08:00", "10:00", "12:00", "14:00", "16:00", "18:00"]
+    },
+    {
+      "id": "IC-VIP-ACC", "agency": "VIP", "mode": "coach",
+      "short_name": "VIP Accra", "long_name": "Kumasi (Asafo) - Accra",
+      "color": "7A0019", "speed_kph": 62,
+      "stops": ["ASAFO", "NKAWKAW", "ACCRA"],
+      "departures": ["03:30", "05:00", "06:30", "08:00", "09:30", "11:00", "12:30", "14:00", "15:30", "17:00", "18:30", "20:00"]
+    },
+    {
+      "id": "IC-STC-TML", "agency": "STC", "mode": "coach",
+      "short_name": "STC Tamale", "long_name": "Kumasi (Asafo) - Tamale via Techiman and Kintampo",
+      "color": "003F87", "speed_kph": 58,
+      "stops": ["ASAFO", "TECHIMAN", "KINTAMPO", "TAMALE"],
+      "departures": ["05:00", "08:00", "13:00"]
+    },
+    {
+      "id": "IC-STC-TDI", "agency": "STC", "mode": "coach",
+      "short_name": "STC Takoradi", "long_name": "Kumasi (Asafo) - Takoradi via Obuasi and Tarkwa",
+      "color": "003F87", "speed_kph": 55,
+      "stops": ["ASAFO", "OBUASI", "DUNKWA", "TARKWA", "TAKORADI"],
+      "departures": ["05:30", "09:00", "14:00"]
+    },
+    {
+      "id": "MMT-KSI-MPG", "agency": "MMT", "mode": "bus",
+      "short_name": "MMT Mampong", "long_name": "Kumasi (Asafo) - Ejisu - Mampong",
+      "color": "E8A317", "speed_kph": 45,
+      "stops": ["ASAFO", "EJISU", "MAMPONG"],
+      "departures": ["05:30", "07:00", "09:00", "11:00", "13:00", "15:00", "17:00"]
+    },
+    {
+      "id": "MMT-KSI-OBS", "agency": "MMT", "mode": "bus",
+      "short_name": "MMT Obuasi", "long_name": "Kumasi (Asafo) - Obuasi",
+      "color": "E8A317", "speed_kph": 45,
+      "stops": ["ASAFO", "BEKWAIRBT", "OBUASI"],
+      "departures": ["05:30", "07:30", "10:00", "13:00", "16:00"]
+    }
+  ]
+}
